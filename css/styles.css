@@ -15,18 +15,8 @@ nav {
     border-radius: 0 0 50px 50px;
 }
 
-aside {
-    background-color: #4aee;
-    position: fixed;
-    width: 70px;
-    left: 0;
-    top: 25%;
-    border-radius: 0 10px 10px 0;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
+a {
+    text-decoration: none;
 }
 
 p, ul {
@@ -34,25 +24,40 @@ p, ul {
     margin-block-end: 0;
 }
 
-.opcion_menu {
+.lista_menu, .lista_info_personal, .lista_contacto {
+    list-style-type: none;
+    padding: 0;
+}
+
+.opcion_menu, .opcion_lista_personal {
     display: inline;
+}
+
+.opcion_menu {
     margin: 40px;
 }
 
-a {
+.opcion_lista_personal {
+    margin: 0 4px;
+}
+
+.opcion_hipervinculo_menu {
     color: #fff;
-    text-decoration: none;
 }
 
 .logo {
-    width: 45px;
-    height: 45px;
-    margin: 7px 0;
+    width: 40px;
+    height: 40px;
 }
 
 .logo_github {
     background-color: white;
     border-radius: 50%;
+}
+
+.datos_personales {
+    padding: 30px;
+    border-right: 1px solid #bbb;
 }
 
 section {
@@ -80,6 +85,11 @@ h2 {
     color: #4ae;
 }
 
+h3 {
+    font-size: 1.3em;
+    text-align: center;
+}
+
 footer {
     color: #fff;
     border-radius: 50px 50px 0 0;
@@ -93,3 +103,11 @@ nav, footer {
     text-align: center;
 }
 
+hr {
+    border: 0;
+    height: 
+    1px;
+    width: 70%;
+    margin: 20px auto;
+    background: #bbb;
+}
