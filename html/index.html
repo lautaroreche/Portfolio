@@ -10,43 +10,47 @@
 <body>
     <header>
         <nav>
-            <ul>
-                <li class="opcion_menu"><a href="#">Inicio</a></li>
-                <li class="opcion_menu"><a href="#">Proyectos</a></li>
-                <li class="opcion_menu"><a href="#">Experiencia</a></li>
-                <li class="opcion_menu"><a href="#">Contacto</a></li>
+            <ul class="lista_menu">
+                <li class="opcion_menu"><a href="#" class="opcion_hipervinculo_menu">Inicio</a></li>
+                <li class="opcion_menu"><a href="#proyectos" class="opcion_hipervinculo_menu">Proyectos</a></li>
+                <li class="opcion_menu"><a href="#experiencia" class="opcion_hipervinculo_menu">Experiencia</a></li>
+                <li class="opcion_menu"><a href="#contacto" class="opcion_hipervinculo_menu">Contacto</a></li>
             </ul>
         </nav>
     </header>
     <section>
         <div class="container">
-            <div>
+            <div class="datos_personales">
                 <h1>Lautaro Reche</h1>
                 <h2>Desarrollador de software</h2>
-                <ul>
-                    <li><a href="https://www.linkedin.com/in/lautaroreche/" target="_blank" rel="noreferrer"><img src="../images/logo_linkedin.png" alt="Logo LinkedIn" class="logo"></a></li>
-                    <li><a href="https://github.com/lautaroreche" target="_blank" rel="noreferrer"><img src="../images/logo_github.png" alt="Logo GitHub" class="logo logo_github"></a></li>
-                    <li><a href="../documentos/cv.pdf" target="_blank" rel="noreferrer"><img src="../images/logo_cv.png" alt="Logo curriculum vitae" class="logo"></a></li>
+                <ul class="lista_info_personal">
+                    <li class="opcion_lista_personal"><a href="https://www.linkedin.com/in/lautaroreche/" target="_blank" rel="noreferrer"><img src="../images/logo_linkedin.png" alt="Logo LinkedIn" class="logo"></a></li>
+                    <li class="opcion_lista_personal"><a href="https://github.com/lautaroreche" target="_blank" rel="noreferrer"><img src="../images/logo_github.png" alt="Logo GitHub" class="logo logo_github"></a></li>
+                    <li class="opcion_lista_personal"><a href="../documentos/cv.pdf" target="_blank" rel="noreferrer"><img src="../images/logo_cv.png" alt="Logo curriculum vitae" class="logo"></a></li>
                 </ul>
             </div>
             <div>
-                <img src="../images/logo_html.png" alt="Logo HTML" class="logo">
-                <img src="../images/logo_css.png" alt="Logo CSS" class="logo">
-                <img src="../images/logo_python.png" alt="Logo Python" class="logo">
-                <img src="../images/logo_csharp.png" alt="Logo C#" class="logo">
-                <img src="../images/logo_git.png" alt="Logo Git" class="logo">
+                <div>
+                    <img src="../images/logo_html.png" alt="Logo HTML" class="logo">
+                    <img src="../images/logo_css.png" alt="Logo CSS" class="logo">
+                    <img src="../images/logo_csharp.png" alt="Logo C#" class="logo">
+                    <img src="../images/logo_python.png" alt="Logo Python" class="logo">
+                </div>
+                <div>
+                    <img src="../images/logo_git.png" alt="Logo Git" class="logo">
+                </div>
             </div>
             
         </div>
     </section>
     <hr>
-    <section> 
+    <section id="proyectos"> 
         <h3>Proyectos</h3>
         <div class="card-container">
             <div class="card">
                 <img src="../images/temporal.jpeg" alt="Proyecto 1" class="card-img">
                 <div class="card-content">
-                    <h3>Proyecto 1</h3>
+                    <p>Proyecto 1</p>
                     <p>Descripción breve del proyecto 1.</p>
                     <a href="https://github.com/usuario/proyecto1" target="_blank" rel="noreferrer">Ver en GitHub</a>
                 </div>
@@ -54,7 +58,7 @@
             <div class="card">
                 <img src="../images/temporal.jpeg" alt="Proyecto 1" class="card-img">
                 <div class="card-content">
-                    <h3>Proyecto 1</h3>
+                    <p>Proyecto 1</p>
                     <p>Descripción breve del proyecto 1.</p>
                     <a href="https://github.com/usuario/proyecto1" target="_blank" rel="noreferrer">Ver en GitHub</a>
                 </div>
@@ -62,7 +66,7 @@
             <div class="card">
                 <img src="../images/temporal.jpeg" alt="Proyecto 1" class="card-img">
                 <div class="card-content">
-                    <h3>Proyecto 1</h3>
+                    <p>Proyecto 1</p>
                     <p>Descripción breve del proyecto 1.</p>
                     <a href="https://github.com/usuario/proyecto1" target="_blank" rel="noreferrer">Ver en GitHub</a>
                 </div>
@@ -70,7 +74,7 @@
             <div class="card">
                 <img src="../images/temporal.jpeg" alt="Proyecto 1" class="card-img">
                 <div class="card-content">
-                    <h3>Proyecto 1</h3>
+                    <p>Proyecto 1</p>
                     <p>Descripción breve del proyecto 1.</p>
                     <a href="https://github.com/usuario/proyecto1" target="_blank" rel="noreferrer">Ver en GitHub</a>
                 </div>
@@ -78,14 +82,14 @@
             <div class="card">
                 <img src="../images/temporal.jpeg" alt="Proyecto 1" class="card-img">
                 <div class="card-content">
-                    <h3>Proyecto 1</h3>
+                    <p>Proyecto 1</p>
                     <p>Descripción breve del proyecto 1.</p>
                     <a href="https://github.com/usuario/proyecto1" target="_blank" rel="noreferrer">Ver en GitHub</a>
                 </div>
                 <div class="card">
                     <img src="../images/temporal.jpeg" alt="Proyecto 1" class="card-img">
                     <div class="card-content">
-                        <h3>Proyecto 1</h3>
+                        <p>Proyecto 1</p>
                         <p>Descripción breve del proyecto 1.</p>
                         <a href="https://github.com/usuario/proyecto1" target="_blank" rel="noreferrer">Ver en GitHub</a>
                     </div>
@@ -93,7 +97,7 @@
                 <div class="card">
                     <img src="../images/temporal.jpeg" alt="Proyecto 1" class="card-img">
                     <div class="card-content">
-                        <h3>Proyecto 1</h3>
+                        <p>Proyecto 1</p>
                         <p>Descripción breve del proyecto 1.</p>
                         <a href="https://github.com/usuario/proyecto1" target="_blank" rel="noreferrer">Ver en GitHub</a>
                     </div>
@@ -101,7 +105,7 @@
                 <div class="card">
                     <img src="../images/temporal.jpeg" alt="Proyecto 1" class="card-img">
                     <div class="card-content">
-                        <h3>Proyecto 1</h3>
+                        <p>Proyecto 1</p>
                         <p>Descripción breve del proyecto 1.</p>
                         <a href="https://github.com/usuario/proyecto1" target="_blank" rel="noreferrer">Ver en GitHub</a>
                     </div>
@@ -110,52 +114,52 @@
         </div>
     </section>
     <hr>
-    <section>
+    <section id="experiencia">
         <h3>Experiencia</h3>
         <div class="container">
             <div>
-                <div>
-                    <p>Software Developer for AI Training</p>
-                    <p>Scale AI</p>
-                </div>
-                <div>
-                    <p>Software Developer</p>
-                    <p>Mercado Libre</p>
-                </div>
+                <p>Software Developer for AI Training</p>
+                <p>Scale AI</p>
             </div>
             <div>
-                <div>
-                    <ul>
-                        <li>Responsabilidad 1</li>
-                        <li>Responsabilidad 2</li>
-                        <li>Responsabilidad 3</li>
-                    </ul>
-                </div>
-                <div>
-                    <ul>
-                        <li>Responsabilidad 1</li>
-                        <li>Responsabilidad 2</li>
-                        <li>Responsabilidad 3</li>
-                    </ul>
-                </div>
+                <ul>
+                    <li>Responsabilidad 1</li>
+                    <li>Responsabilidad 2</li>
+                    <li>Responsabilidad 3</li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div>
+                <p>Software Developer</p>
+                <p>Mercado Libre</p>
+            </div>
+            <div>
+                <ul>
+                    <li>Responsabilidad 1</li>
+                    <li>Responsabilidad 2</li>
+                    <li>Responsabilidad 3</li>
+                </ul>
             </div>
         </div>
     </section>
     <hr>
-    <section>
+    <section id="contacto">
         <h3>Contacto</h3>
         <div class="container">
-            <ul>
-                <li><a href="../documentos/cv.pdf" target="_blank" rel="noreferrer"><img src="../images/logo_gmail.png" alt="Logo Gmail" class="logo"></a>lautaroreche1@gmail.com</li>
-                <li><a href="https://www.linkedin.com/in/lautaroreche/" target="_blank" rel="noreferrer"><img src="../images/logo_linkedin.png" alt="Logo LinkedIn" class="logo"></a>lautaroreche</li>
-                <li><a href="https://github.com/lautaroreche" target="_blank" rel="noreferrer"><img src="../images/logo_github.png" alt="Logo GitHub" class="logo logo_github"></a>lautaroreche</li>
-            </ul>
-        </div>
-        <div class="container">
-            <p>¿Querés que trabajemos juntos?</p>
-            <input type="text" placeholder="Nombre">
-            <input type="email" placeholder="Correo electrónico">
-            <input type="submit" value="Enviar">
+            <div>
+                <ul class="lista_contacto">
+                    <li><a href="../documentos/cv.pdf" target="_blank" rel="noreferrer"><img src="../images/logo_gmail.png" alt="Logo Gmail" class="logo"></a>lautaroreche1@gmail.com</li>
+                    <li><a href="https://www.linkedin.com/in/lautaroreche/" target="_blank" rel="noreferrer"><img src="../images/logo_linkedin.png" alt="Logo LinkedIn" class="logo"></a>lautaroreche</li>
+                    <li><a href="https://github.com/lautaroreche" target="_blank" rel="noreferrer"><img src="../images/logo_github.png" alt="Logo GitHub" class="logo logo_github"></a>lautaroreche</li>
+                </ul>
+            </div>
+            <div>
+                <p>¿Querés que trabajemos juntos?</p>
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Correo electrónico" required>
+                <input type="submit" value="Enviar">
+            </div>
         </div>
     </section>
     <footer>
