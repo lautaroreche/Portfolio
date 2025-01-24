@@ -4,6 +4,7 @@ body {
     background-color: #eee5;
     font-family: sans-serif;
     color: #333;
+    font-size: 1.2em;
 }
 
 nav {
@@ -49,8 +50,8 @@ section {
     padding: 20px;
 }
 
-.seccion_principal {
-    margin-top: 90px;
+#seccion_principal {
+    margin-top: 100px;
 }
 
 .foto_perfil {
@@ -111,7 +112,6 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    max-width: 1500px;
     justify-content: center;
 }
 
@@ -160,7 +160,7 @@ h3 {
     width: 25px;
 }
 
-.proyectos :hover {
+.proyectos:hover {
     transform: scale(1.01);
     transition: transform 0.4s ease;
 }
@@ -178,6 +178,70 @@ h3 {
 .opcion_menu:hover {
     text-shadow: 0 0 10px #fff7;
     transition: transform 12s ease;
+}
+
+#experiencia {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.experiencia_laboral {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    box-shadow: 0 0 5px #bbb5;
+    border-radius: 15px;
+}
+
+.detalle_experiencia_laboral {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+}
+
+.detalle_trabajo p {
+    margin-bottom: 6px;
+}
+
+.logo_empresa {
+    width: 80px;
+    height: 80px;
+}
+
+.tareas_experiencia_laboral {
+    display: flex;
+    flex: 1;
+}
+
+.tareas_experiencia_laboral ul li {
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.nombre_puesto {
+    font-size: 1.6em;
+}
+
+.nombre_empresa {
+    font-size: 1.3em;
+}
+
+.contacto {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.contacto_personal, .contacto_form {
+    flex: 1;
+    box-sizing: border-box;
+    margin: 0 auto;
 }
 
 input {
@@ -207,6 +271,11 @@ input {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+}
+
+.boton:hover {
+    background-color: #4aef;
+    cursor: pointer;
 }
 
 footer {
