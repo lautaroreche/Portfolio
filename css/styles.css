@@ -104,6 +104,7 @@ h3 {
     font-size: 2.3em;
     font-weight: 400;
     text-align: center;
+    margin-top: 0;
 }
 
 .proyectos {
@@ -177,6 +178,35 @@ h3 {
 .opcion_menu:hover {
     text-shadow: 0 0 10px #fff7;
     transition: transform 12s ease;
+}
+
+input {
+    box-sizing: border-box;
+    display: block;
+    width: 400px;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #bbb;
+}
+
+.boton {
+    background-color: #4aee;
+    color: #fff;
+    font-size: 1em;
+}
+
+.texto_hipervinculo_contacto {
+    color: #333;
+    display: inline;
+    margin-left: 10px;
+    font-size: 1.1em;
+}
+
+.hipervinculo_contacto {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
 footer {
