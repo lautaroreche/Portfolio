@@ -160,7 +160,7 @@ h3 {
     width: 25px;
 }
 
-.proyectos:hover {
+.card:hover {
     transform: scale(1.01);
     transition: transform 0.4s ease;
 }
@@ -230,34 +230,9 @@ h3 {
 }
 
 .contacto {
-    max-width: 900px;
-    margin: 0 auto;
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    justify-content: center;
     margin-bottom: 40px;
-}
-
-.contacto_personal, .contacto_form {
-    flex: 1;
-    box-sizing: border-box;
-    margin: 0 auto;
-}
-
-input {
-    box-sizing: border-box;
-    display: block;
-    width: 400px;
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 5px;
-    border: 1px solid #bbb;
-}
-
-.boton {
-    background-color: #4aee;
-    color: #fff;
-    font-size: 1em;
 }
 
 .texto_hipervinculo_contacto {
@@ -271,11 +246,6 @@ input {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-}
-
-.boton:hover {
-    background-color: #4aef;
-    cursor: pointer;
 }
 
 footer {
