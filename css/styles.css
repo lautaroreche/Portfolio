@@ -45,9 +45,28 @@ p, ul {
     color: #fff;
 }
 
+section {
+    padding: 20px;
+}
+
+.seccion_principal {
+    margin-top: 90px;
+}
+
+.foto_perfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
 .logo {
     width: 40px;
     height: 40px;
+}
+
+.logo_tecnologias {
+    margin: 5px;
 }
 
 .logo_github {
@@ -56,38 +75,108 @@ p, ul {
 }
 
 .datos_personales {
-    padding: 30px;
-    border-right: 1px solid #bbb;
-}
-
-section {
-    padding: 20px;
-    margin: 90px 10% 10px 10%;
+    border-right: 1px solid #bbb5;
+    padding-right: 30px;
 }
 
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 50px;
+    gap: 30px;
 }
 
 h1 {
-    font-size: 3.5em;
+    font-size: 4.5em;
     font-weight: 500;
     margin: 0;
 }
 
 h2 {
     margin-top: 8px;
-    font-size: 1.6em;
+    margin-bottom: 16px;
+    font-size: 2.6em;
     font-weight: 400;
     color: #4ae;
 }
 
 h3 {
-    font-size: 1.3em;
+    font-size: 2.3em;
+    font-weight: 400;
     text-align: center;
+}
+
+.proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1500px;
+    justify-content: center;
+}
+
+.card {
+    border-radius: 15px;
+    box-shadow: 0 0 5px #bbb;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.imagen_proyecto {
+    border-radius: 15px 15px 0 0;
+}
+
+.card-content {
+    position: relative;
+    height: 50px;
+    overflow: hidden;
+}
+
+.tags {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.link_repositorio {
+    position: absolute;
+    bottom: 8px;
+    left: 10px;
+}
+
+.tag {
+    background-color: #e5be01;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.8em;
+}
+
+.logo_link_repositorio {
+    width: 25px;
+}
+
+.proyectos :hover {
+    transform: scale(1.01);
+    transition: transform 0.4s ease;
+}
+
+.logo_info_personal:hover, .logo_tecnologias:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.foto_perfil:hover {
+    transform: scale(1.005);
+    transition: transform 0.3s ease;
+}
+
+.opcion_menu:hover {
+    text-shadow: 0 0 10px #fff7;
+    transition: transform 12s ease;
 }
 
 footer {
@@ -105,9 +194,8 @@ nav, footer {
 
 hr {
     border: 0;
-    height: 
-    1px;
+    height: 1px;
     width: 70%;
-    margin: 20px auto;
-    background: #bbb;
+    margin: 30px auto;
+    background: #bbb5;
 }
