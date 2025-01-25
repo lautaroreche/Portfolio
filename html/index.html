@@ -13,17 +13,18 @@
             <ul class="lista_menu">
                 <li class="opcion_menu"><a href="#inicio" class="opcion_hipervinculo_menu">Inicio</a></li>
                 <li class="opcion_menu"><a href="#proyectos" class="opcion_hipervinculo_menu">Proyectos</a></li>
+                <li class="opcion_menu"><a href="#tecnologias" class="opcion_hipervinculo_menu">Tecnologías</a></li>
                 <li class="opcion_menu"><a href="#experiencia" class="opcion_hipervinculo_menu">Experiencia</a></li>
                 <li class="opcion_menu"><a href="#contacto" class="opcion_hipervinculo_menu">Contacto</a></li>
             </ul>
         </nav>
     </header>
     <section id="inicio">
-        <div class="container">
+        <div class="container_inicio">
             <div>
                 <img src="../images/otros/foto.png" alt="Foto de perfil" class="foto_perfil">
             </div>
-            <div class="datos_personales">
+            <div class="info_personal">
                 <h1>Lautaro Reche</h1>
                 <h2>Desarrollador de software</h2>
                 <ul class="lista_info_personal">
@@ -31,18 +32,6 @@
                     <li class="opcion_lista_personal"><a href="https://github.com/lautaroreche" target="_blank" rel="noreferrer"><img src="../images/logos/logo_github.png" alt="Logo GitHub" class="logo logo_github logo_info_personal"></a></li>
                 </ul>
             </div>
-            <div>
-                <div class="logos_tecnologias">
-                    <img src="../images/logos/logo_html.png" alt="Logo HTML" class="logo logo_tecnologias">
-                    <img src="../images/logos/logo_css.png" alt="Logo CSS" class="logo logo_tecnologias">
-                    <img src="../images/logos/logo_csharp.png" alt="Logo C#" class="logo logo_tecnologias">
-                    <img src="../images/logos/logo_python.png" alt="Logo Python" class="logo logo_tecnologias">
-                </div>
-                <div class="logos_tecnologias">
-                    <img src="../images/logos/logo_git.png" alt="Logo Git" class="logo logo_tecnologias">
-                </div>
-            </div>
-            
         </div>
     </section>
     <hr>
@@ -101,53 +90,67 @@
         </div>
     </section>
     <hr>
-    <section id="experiencia">
-        <h3>Experiencia</h3>
-        <div class="experiencia_laboral">
-            <div class="detalle_experiencia_laboral">
-                <div>
-                    <img src="../images/logos/logo_scaleai.png" alt="Logo Scale AI" class="logo_empresa">
-                </div>
-                <div class="detalle_trabajo">
-                    <p class="nombre_puesto">Software Developer for AI Training</p>
-                    <p class="nombre_empresa">Scale AI</p>
-                    <p>San Francisco, Estados Unidos</p>
-                    <p>Junio 2024 - Actualidad</p>
-                </div>
-            </div>
-            <div class="tareas_experiencia_laboral">
-                <ul>
-                    <li>Entrenamiento y optimización de modelos de inteligencia artificial aplicando RLHF (Reinforcement learning from human feedback o Aprendizaje por refuerzo a partir de feedback humano)</li>
-                    <li>Modelos relacionados a matemática, programación, vida cotidiana, implementación de APIs, entre otros</li>
-                    <li>Revisión de tareas de otros entrenadores para garantizar la calidad del feedback recibido por el modelo</li>
-                </ul>
+    <section id="tecnologias">
+        <h3>Tecnologías</h3>
+            <div class="lista_tecnologias">
+                <img src="../images/logos/logo_html.png" alt="Logo HTML" class="logo logo_tecnologias">
+                <img src="../images/logos/logo_css.png" alt="Logo CSS" class="logo logo_tecnologias">
+                <img src="../images/logos/logo_csharp.png" alt="Logo C#" class="logo logo_tecnologias">
+                <img src="../images/logos/logo_python.png" alt="Logo Python" class="logo logo_tecnologias">
+                <img src="../images/logos/logo_git.png" alt="Logo Git" class="logo logo_tecnologias">
             </div>
         </div>
-        <div class="experiencia_laboral">
-            <div class="detalle_experiencia_laboral">
-                <div>
-                    <img src="../images/logos/logo_mercadolibre.png" alt="Logo Mercado Libre" class="logo_empresa">
+    </section>
+    <hr>
+    <section id="experiencia">
+        <h3>Experiencia</h3>
+        <div class="container_experiencia">
+            <div class="experiencia_laboral">
+                <div class="detalle_experiencia_laboral">
+                    <div>
+                        <img src="../images/logos/logo_scaleai.png" alt="Logo Scale AI" class="logo_empresa">
+                    </div>
+                    <div class="detalle_trabajo">
+                        <p class="nombre_puesto">Software Developer for AI Training</p>
+                        <p class="nombre_empresa">Scale AI</p>
+                        <p>San Francisco, Estados Unidos</p>
+                        <p>Junio 2024 - Actualidad</p>
+                    </div>
                 </div>
-                <div class="detalle_trabajo">
-                    <p class="nombre_puesto">Software Developer</p>
-                    <p class="nombre_empresa">Mercado Libre</p>
-                    <p>Buenos Aires, Argentina</p>
-                    <p>Agosto 2021 - Diciembre 2024</p>
+                <div class="tareas_experiencia_laboral">
+                    <ul>
+                        <li>Entrenamiento y optimización de modelos de inteligencia artificial aplicando RLHF (Reinforcement learning from human feedback o Aprendizaje por refuerzo a partir de feedback humano)</li>
+                        <li>Modelos relacionados a matemática, programación, vida cotidiana, implementación de APIs, entre otros</li>
+                        <li>Revisión de tareas de otros entrenadores para garantizar la calidad del feedback recibido por el modelo</li>
+                    </ul>
                 </div>
             </div>
-            <div class="tareas_experiencia_laboral">
-                <ul>
-                    <li>Automatización de trabajo mediante el desarrollo de árboles de decisión en herramienta propia de la empresa</li>
-                    <li>Creación de reportes para automatizar tareas diarias como reportes a líderes y managers, ceremonias de Scrum, avisos de vencimiento de tickets / SLA, entre otros</li>
-                    <li>Gestión de bugs en Jira junto al equipo de IT, producto y negocio</li>
-                </ul>
+            <div class="experiencia_laboral">
+                <div class="detalle_experiencia_laboral">
+                    <div>
+                        <img src="../images/logos/logo_mercadolibre.png" alt="Logo Mercado Libre" class="logo_empresa">
+                    </div>
+                    <div class="detalle_trabajo">
+                        <p class="nombre_puesto">Software Developer</p>
+                        <p class="nombre_empresa">Mercado Libre</p>
+                        <p>Buenos Aires, Argentina</p>
+                        <p>Agosto 2021 - Diciembre 2024</p>
+                    </div>
+                </div>
+                <div class="tareas_experiencia_laboral">
+                    <ul>
+                        <li>Automatización de trabajo mediante el desarrollo de árboles de decisión en herramienta propia de la empresa</li>
+                        <li>Creación de reportes para automatizar tareas diarias como reportes a líderes y managers, ceremonias de Scrum, avisos de vencimiento de tickets / SLA, entre otros</li>
+                        <li>Gestión de bugs en Jira junto al equipo de IT, producto y negocio</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
     <hr>
     <section id="contacto">
         <h3>Contacto</h3>
-        <div class="container contacto">
+        <div class="container_contacto">
             <ul class="lista_contacto">
                 <li>
                     <a href="mailto:lautaroreche1@gmail.com" target="_blank" rel="noreferrer" class="hipervinculo_contacto">
