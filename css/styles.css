@@ -51,17 +51,31 @@ p, ul {
     color: #fff;
 }
 
+hr {
+    border: 0;
+    height: 1px;
+    width: 70%;
+    margin: 30px auto;
+    background: #bbb5;
+}
+
 section {
-    padding: 20px;
+    padding: 30px;
 }
 
 #inicio {
     margin-top: 90px;
 }
 
+.info_personal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .foto_perfil {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     margin-top: 20px;
 }
@@ -71,8 +85,16 @@ section {
     height: 40px;
 }
 
+.lista_tecnologias {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
 .logo_tecnologias {
-    margin: 5px;
+    margin: 0 15px;
+    width: 50px;
+    height: 50px;
 }
 
 .logo_github {
@@ -80,30 +102,23 @@ section {
     border-radius: 50%;
 }
 
-.datos_personales {
-    border-right: 1px solid #bbb5;
-    padding-right: 30px;
-}
-
-.container {
+.container_inicio {
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 40px;
 }
 
 h1 {
-    font-size: 4.5em;
+    font-size: 4.8em;
     font-weight: 500;
     margin: 0;
 }
 
 h2 {
-    margin-top: 8px;
-    margin-bottom: 16px;
-    font-size: 2.6em;
+    font-size: 2.7em;
     font-weight: 400;
     color: #4ae;
+    margin: 0 0 15px 0;
 }
 
 h3 {
@@ -123,7 +138,7 @@ h3 {
 .card {
     border-radius: 15px;
     box-shadow: 0 0 5px #bbb;
-    width: 300px;
+    width: 350px;
     display: flex;
     flex-direction: column;
 }
@@ -185,8 +200,8 @@ h3 {
     transition: text-shadow 0.5s ease;
 }
 
-#experiencia {
-    max-width: 1000px;
+.container_experiencia {
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -196,7 +211,7 @@ h3 {
 .experiencia_laboral {
     display: flex;
     justify-content: space-between;
-    padding: 15px;
+    padding: 20px;
     box-shadow: 0 0 5px #bbb5;
     border-radius: 15px;
 }
@@ -222,7 +237,7 @@ h3 {
 }
 
 .tareas_experiencia_laboral ul li {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     line-height: 1.2;
 }
 
@@ -234,10 +249,10 @@ h3 {
     font-size: 1.3em;
 }
 
-.contacto {
+.container_contacto {
     display: flex;
     justify-content: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .texto_hipervinculo_contacto {
@@ -268,12 +283,4 @@ nav, footer {
     background-color: #4aee;
     box-shadow: 0 0 10px #bbb;
     text-align: center;
-}
-
-hr {
-    border: 0;
-    height: 1px;
-    width: 70%;
-    margin: 30px auto;
-    background: #bbb5;
 }
