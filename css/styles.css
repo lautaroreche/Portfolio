@@ -142,10 +142,12 @@ h3 {
 
 .card {
     border-radius: 15px;
-    box-shadow: 0 0 10px #bbb;
+    box-shadow: 0 0 5px #bbb;
     width: 325px;
     display: flex;
     flex-direction: column;
+    border-left: 5px solid #4ae;
+    border-right: 5px solid #4ae;
 }
 
 .container_titulo_proyecto {
@@ -232,8 +234,10 @@ h3 {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    box-shadow: 0 0 5px #bbb5;
+    box-shadow: 0 0 5px #bbb;
     border-radius: 15px;
+    border-left: 5px solid #4ae;
+    border-right: 5px solid #4ae;
 }
 
 .detalle_experiencia_laboral {
