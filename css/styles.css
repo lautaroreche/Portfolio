@@ -8,51 +8,47 @@ body {
     background-color: #eee5;
     font-family: sans-serif;
     color: #333;
-    font-size: 1.2em;
 }
 
-nav {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    border-radius: 0 0 50px 50px;
-    height: 30px;
-    font-size: 1.3em;
-    padding: 17px 0;
-    background-color: #4aee;
-    box-shadow: 0 0 10px #bbb;
-    text-align: center;
+#check_menu_hamburguesa, .menu_hamburguesa {
+    display: none;
 }
 
 a {
     text-decoration: none;
 }
 
-p, ul {
-    margin-block-start: 0;
-    margin-block-end: 0;
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-radius: 0 0 50px 50px;
+    background-color: #4aee;
+    box-shadow: 0 0 10px #bbb;
 }
 
-.lista_menu, .lista_info_personal, .lista_contacto {
-    list-style-type: none;
+nav ul {
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    margin: 0;
     padding: 0;
+    list-style-type: none;
 }
 
-.opcion_menu, .opcion_lista_personal {
+.info_personal ul li {
     display: inline;
 }
 
-.opcion_menu {
-    margin: 40px;
+nav ul li {
+    margin: 0 25px;
 }
 
-.opcion_lista_personal {
-    margin: 0 4px;
-}
-
-.opcion_hipervinculo_menu {
+nav ul li a {
+    font-size: 1.3em;
     color: #fff;
 }
 
@@ -68,191 +64,163 @@ section {
     padding: 30px;
 }
 
-#inicio {
-    margin-top: 90px;
-}
-
 .info_personal {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    gap: 9px;
+}
+
+.info_personal ul {
+    display: flex;
+    gap: 15px;
 }
 
 .foto_perfil {
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    margin-top: 20px;
 }
 
 .logo {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
 }
 
 .lista_tecnologias {
     display: flex;
     justify-content: center;
-    gap: 20px;
-}
-
-.logo_tecnologias {
-    margin: 0 15px;
-    width: 50px;
-    height: 50px;
+    gap: 50px;
 }
 
 .logo_github {
-    background-color: white;
     border-radius: 50%;
 }
 
-.container_inicio {
+#inicio {
+    margin-top: 80px;
     display: flex;
     justify-content: center;
-    gap: 40px;
+    align-items: center;
+    gap: 30px;
 }
 
 h1 {
-    font-size: 4.8em;
-    font-weight: 500;
     margin: 0;
+    font-size: 3.5em;
+    font-weight: 500;
 }
 
 h2 {
-    font-size: 2.7em;
+    margin: 0;
+    font-size: 2.2em;
     font-weight: 400;
     color: #4ae;
-    margin: 0 0 15px 0;
 }
 
 h3 {
-    font-size: 2.3em;
+    font-size: 2em;
     font-weight: 400;
     text-align: center;
     margin-top: 0;
 }
 
-.proyectos {
+.container-card {
+    margin: 0 auto;
     display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1480px;
 }
 
-.card {
-    border-radius: 15px;
-    box-shadow: 0 0 5px #bbb;
-    width: 325px;
+.card_proyecto {
     display: flex;
     flex-direction: column;
+    width: 330px;
+}
+
+.card_proyecto, .card-experiencia-laboral {
+    box-shadow: 0 0 5px #bbb;
+    border-radius: 15px;
     border-left: 5px solid #4ae;
     border-right: 5px solid #4ae;
+    background-color: #eee3;
 }
 
 .container_titulo_proyecto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 90px;
-    border-radius: 15px 15px 0 0;
-    background-color: #eee;
 }
 
-.titulo_proyecto {
-    padding: 20px;
-    font-size: 1.2em;
+.container_titulo_proyecto p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 1.4em;
 }
 
 .imagen_proyecto {
     width: 100%;
-    height: 320px;
+    height: 340px;
 }
 
-.card-content {
-    position: relative;
-    height: 50px;
-    overflow: hidden;
-    background-color: #eee;
-    border-radius: 0 0 15px 15px;
+.logo-github-card {
+    width: 30px;
+    height: 30px;
 }
 
-.tags {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
+.card-detail {
+    padding: 0 10px;
     display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    height: 50px;
 }
 
-.link_repositorio {
-    position: absolute;
-    bottom: 8px;
-    left: 10px;
-}
-
-.tag {
-    background-color: #333;
-    color: #fff;
+.tags span {
+    margin: 0 1px;
     padding: 5px;
+    background-color: #444;
+    color: #fff;
     border-radius: 5px;
-    font-size: 0.8em;
+    font-size: 0.9em;
 }
 
-.logo_link_repositorio {
-    width: 25px;
-    border-radius: 50%;
-}
-
-.card:hover {
-    transform: scale(1.01);
-    transition: transform 0.4s ease;
-}
-
-.logo_info_personal:hover, .logo_tecnologias:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
-}
-
-.foto_perfil:hover {
-    transform: scale(1.005);
-    transition: transform 0.3s ease;
-}
-
-.opcion_menu:hover {
-    text-shadow: 0 0 20px #eeec;
+nav ul li:hover {
+    text-shadow: 0 0 25px rgba(238, 238, 238, 0.886);
     transition: text-shadow 0.5s ease;
 }
 
-.container_experiencia {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.experiencia_laboral {
+.card-experiencia-laboral {
+    padding: 20px;
     display: flex;
     justify-content: space-between;
-    padding: 20px;
-    box-shadow: 0 0 5px #bbb;
-    border-radius: 15px;
-    border-left: 5px solid #4ae;
-    border-right: 5px solid #4ae;
+    gap: 40px;
+    max-width: 1000px;
 }
 
-.detalle_experiencia_laboral {
+.detalle-experiencia-laboral {
     display: flex;
-    gap: 20px;
+    gap: 15px;
     flex: 1;
 }
 
-.detalle_trabajo p {
-    margin-bottom: 6px;
-}
-
-.logo_empresa {
+.detalle-experiencia-laboral img {
     width: 80px;
     height: 80px;
+}
+
+.detalle-experiencia-laboral p {
+    margin: 0;
+}
+
+.informacion-experiencia {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .tareas_experiencia_laboral {
@@ -260,9 +228,18 @@ h3 {
     flex: 1;
 }
 
+.tareas_experiencia_laboral ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 1.1em;
+    line-height: 1.4;
+
+}
+
 .tareas_experiencia_laboral ul li {
-    margin-bottom: 15px;
-    line-height: 1.2;
+    list-style-type: disc;
+    padding-left: 0;
 }
 
 .nombre_puesto {
@@ -276,27 +253,20 @@ h3 {
 .container_contacto {
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
 }
 
-.texto_hipervinculo_contacto {
+.hipervinculo_contacto p {
     color: #333;
-    display: inline;
-    margin-left: 10px;
-    font-size: 1.1em;
+    font-size: 1.3em;
 }
 
 .hipervinculo_contacto {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    gap: 10px;
 }
 
-.texto_hipervinculo_contacto:hover {
-    transform: scale(1.005);
-}
-
-.desarrollado {
+footer p {
     padding: 8px 0;
     margin: 0;
     color: #fff;
@@ -304,4 +274,62 @@ h3 {
     background-color: #333;
     text-align: center;
     border-top: 1px solid #000;
+}
+
+@media (max-width: 750px) {
+    nav ul {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 54px;
+    }
+
+    .menu_hamburguesa {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .logo_hamburguesa {
+        width: 40px;
+        height: 40px;
+    }
+
+    #check_menu_hamburguesa:checked ~ ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        gap: 30px;
+        position: absolute;
+        top: 54px;
+        left: 0;
+        background-color: #4aee;
+        width: 100%;
+        border-radius: 0 0 50px 50px;
+        box-shadow: 0 5px 10px #bbb;
+    }
+
+    nav:has(#check_menu_hamburguesa:checked) {
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .foto_perfil {
+        width: 200px;
+        height: 200px;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
 }

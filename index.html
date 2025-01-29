@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lautaro Reche - Portfolio</title>
+    <link rel="icon" href="images/otros/favicon.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" id="check_menu_hamburguesa">
+            <label for="check_menu_hamburguesa" class="menu_hamburguesa">
+                <img src="images/logos/logo_menu.png" alt="Logo del menú" class="logo_hamburguesa"></i>
+            </label>
+            <ul>
+                <li><a href="#inicio" onclick="toggleCheckbox()">Inicio</a></li>
+                <li><a href="#proyectos" onclick="toggleCheckbox()">Proyectos</a></li>
+                <li><a href="#tecnologias" onclick="toggleCheckbox()">Tecnologías</a></li>
+                <li><a href="#experiencia" onclick="toggleCheckbox()">Experiencia</a></li>
+                <li><a href="#contacto" onclick="toggleCheckbox()">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="inicio">
+        <div>
+            <img src="images/otros/foto.png" alt="Foto de perfil" class="foto_perfil">
+        </div>
+        <div class="info_personal">
+            <h1>Lautaro Reche</h1>
+            <h2>Desarrollador de software</h2>
+            <ul>
+                <li>
+                    <a href="https://www.linkedin.com/in/lautaroreche/" target="_blank" rel="noreferrer">
+                        <img src="images/logos/logo_linkedin.png" alt="Logo LinkedIn" class="logo">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/lautaroreche" target="_blank" rel="noreferrer">
+                        <img src="images/logos/logo_github.png" alt="Logo GitHub" class="logo logo_github">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <hr>
+    <section id="proyectos"> 
+        <h3>Proyectos</h3>
+        <div class="container-card">
+            <div class="card_proyecto">
+                <div class="container_titulo_proyecto">
+                    <p>Página web de Disco Pizza</p>
+                </div>
+                <img src="images/proyectos/foto_proyecto_disco_pizza.png" alt="Foto del proyecto Disco Pizza" class="imagen_proyecto">
+                <div class="card-detail">
+                    <a href="https://github.com/lautaroreche/Disco-Pizza-Web-Page" target="_blank" rel="noreferrer">
+                        <img src="images/logos/logo_github.png" class="logo-github-card">
+                    </a>
+                    <div class="tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card_proyecto">
+                <div class="container_titulo_proyecto">
+                    <p>Detección de objetos con OpenCV</p>
+                </div>
+                <img src="images/proyectos/foto_proyecto_deteccion_objetos.png" alt="Foto del proyecto detección de objetos" class="imagen_proyecto">
+                <div class="card-detail">
+                    <a href="https://github.com/lautaroreche/Object-Detection-OpenCV" target="_blank" rel="noreferrer">
+                        <img src="images/logos/logo_github.png" class="logo-github-card">
+                    </a>
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>OpenCV</span>
+                        <span>Cv2</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card_proyecto">
+                <div class="container_titulo_proyecto">
+                    <p>Lectura de texto en imagen (OCR)</p>
+                </div>
+                <img src="images/proyectos/foto_proyecto_lectura_ocr.png" alt="Foto del proyecto lectura de texto OCR" class="imagen_proyecto">
+                <div class="card-detail">
+                    <a href="https://github.com/lautaroreche/Image-Reader-OCR" target="_blank" rel="noreferrer">
+                        <img src="images/logos/logo_github.png" class="logo-github-card">
+                    </a>
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>Pytesseract</span>
+                        <span>Pillow (PIL)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card_proyecto">
+                <div class="container_titulo_proyecto">
+                    <p>Actualización de precios de cryptomonedas</p>
+                </div>
+                <img src="images/proyectos/foto_proyecto_actualizacion_crypto.png" alt="Foto del proyecto de actualización de precios crypto" class="imagen_proyecto">
+                <div class="card-detail">
+                    <a href="https://github.com/lautaroreche/Crypto-Prices-Updater" target="_blank" rel="noreferrer">
+                        <img src="images/logos/logo_github.png" class="logo-github-card">
+                    </a>
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>Requests</span>
+                        <span>Pandas</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card_proyecto">
+                <div class="container_titulo_proyecto">
+                    <p>Simulador de banco (ATM)</p>
+                </div>
+                <img src="images/proyectos/foto_proyecto_banco_atm.png" alt="Foto del proyecto Banco ATM" class="imagen_proyecto">
+                <div class="card-detail">
+                    <a href="https://github.com/lautaroreche/ATM-Bank-Account-Manager" target="_blank" rel="noreferrer">
+                        <img src="images/logos/logo_github.png" class="logo-github-card">
+                    </a>
+                    <div class="tags">
+                        <span>C#</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section id="tecnologias">
+        <h3>Tecnologías</h3>
+            <div class="lista_tecnologias">
+                <img src="images/logos/logo_html.png" alt="Logo HTML" class="logo">
+                <img src="images/logos/logo_css.png" alt="Logo CSS" class="logo">
+                <img src="images/logos/logo_csharp.png" alt="Logo C#" class="logo">
+                <img src="images/logos/logo_python.png" alt="Logo Python" class="logo">
+                <img src="images/logos/logo_git.png" alt="Logo Git" class="logo">
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section id="experiencia">
+        <h3>Experiencia</h3>
+        <div class="container-card">
+            <div class="card-experiencia-laboral">
+                <div class="detalle-experiencia-laboral">
+                    <img src="images/logos/logo_scaleai.png" alt="Logo Scale AI">
+                    <div class="informacion-experiencia">
+                        <p class="nombre_puesto">Software Developer for AI Training</p>
+                        <p class="nombre_empresa">Scale AI</p>
+                        <p>San Francisco, Estados Unidos (Remoto)</p>
+                        <p>Junio 2024 - Actualidad</p>
+                    </div>
+                </div>
+                <div class="tareas_experiencia_laboral">
+                    <ul>
+                        <li>Entrenamiento y optimización de modelos de inteligencia artificial aplicando RLHF (Reinforcement learning from human feedback o Aprendizaje por refuerzo a partir de feedback humano)</li>
+                        <li>Modelos relacionados a matemática, programación, vida cotidiana, implementación de APIs, entre otros</li>
+                        <li>Revisión de tareas de otros entrenadores para garantizar la calidad del feedback recibido por el modelo</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-experiencia-laboral">
+                <div class="detalle-experiencia-laboral">
+                    <img src="images/logos/logo_mercadolibre.png" alt="Logo Mercado Libre">
+                    <div class="informacion-experiencia">
+                        <p class="nombre_puesto">Software Developer</p>
+                        <p class="nombre_empresa">Mercado Libre</p>
+                        <p>Buenos Aires, Argentina</p>
+                        <p>Agosto 2021 - Diciembre 2024</p>
+                    </div>
+                </div>
+                <div class="tareas_experiencia_laboral">
+                    <ul>
+                        <li>Automatización de trabajo mediante el desarrollo de árboles de decisión en herramienta propia de la empresa</li>
+                        <li>Creación de reportes para automatizar tareas diarias como reportes a líderes y managers, ceremonias de Scrum, avisos de vencimiento de tickets / SLA, entre otros</li>
+                        <li>Gestión de bugs en Jira junto al equipo de IT, producto y negocio</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section id="contacto">
+        <h3>Contacto</h3>
+        <div class="container_contacto">
+            <ul>
+                <li>
+                    <a href="mailto:lautaroreche1@gmail.com" target="_blank" rel="noreferrer" class="hipervinculo_contacto">
+                        <img src="images/logos/logo_gmail.png" alt="Logo Gmail" class="logo">
+                        <p>lautaroreche1@gmail.com</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/lautaroreche/" target="_blank" rel="noreferrer" class="hipervinculo_contacto">
+                        <img src="images/logos/logo_linkedin.png" alt="Logo LinkedIn" class="logo">
+                        <p>lautaroreche</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <p>Desarrollado por Lautaro Reche</p>
+    </footer>
+</body>
+</html>
+
+<script>
+    function toggleCheckbox() {
+        document.getElementById('check_menu_hamburguesa').checked = false;
+    }
+</script>
