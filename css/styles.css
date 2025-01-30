@@ -394,24 +394,20 @@ nav ul li:hover {
 
 
 @media (max-width: 470px) {
-    .tags span {
-        padding: 3px;
-        font-size: 0.8em;
-    }
-
     .lista-tecnologias {
         gap: 30px;
     }
-}
 
-
-@media (max-width: 470px) {
     .tags span {
         display: none;
     }
 
     .container-titulo-proyecto p, .container-titulo-proyecto a {
         font-size: 1.2em;
+    }
+
+    .card-detail {
+        justify-content: center;
     }
 }
 
