@@ -154,11 +154,12 @@ h3 {
     height: 90px;
 }
 
-.container-titulo-proyecto p {
+.container-titulo-proyecto p, .container-titulo-proyecto a {
     margin: 0;
     padding: 0;
     text-align: center;
     font-size: 1.4em;
+    color: #333;
 }
 
 .imagen-proyecto {
@@ -409,7 +410,7 @@ nav ul li:hover {
         display: none;
     }
 
-    .container-titulo-proyecto p {
+    .container-titulo-proyecto p, .container-titulo-proyecto a {
         font-size: 1.2em;
     }
 }
