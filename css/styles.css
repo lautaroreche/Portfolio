@@ -378,10 +378,12 @@ footer p {
         display: none;
     }
 
+    #info-personal {
+        gap: 0;
+    }
+
     .info-personal {
-        text-align: center;
         align-items: center;
-        gap: 15px
     }
 }
 
