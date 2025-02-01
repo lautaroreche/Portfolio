@@ -1,5 +1,6 @@
 # Web Page for my personal Portfolio 🌐  
 
+## Description ℹ️
 This repository contains the code for a **web page built with HTML and CSS**.
 
 ## Features ✨  
@@ -24,8 +25,6 @@ You can modify the styles and structure of the page by editing the following fil
 - `styles.css` → Styling and visual design.
 
 ## Contact 📧
-
-If you have any questions or would like to inquire about our services, feel free to contact us:
-
+If you have any questions or comments, feel free to contact me:
 - **Email**: lautaroreche1@gmail.com
 - **LinkedIn**: [lautaroreche](https://www.linkedin.com/in/lautaroreche/)
