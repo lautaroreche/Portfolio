@@ -21,7 +21,7 @@
         <nav>
             <input type="checkbox" id="check-hamburger-menu">
             <label for="check-hamburger-menu" class="hamburger-menu">
-                <img src="{% static 'images/menu-logo.png' %}" alt="Menu logo" class="hamburger-logo"></i>
+                <img src="{% static 'images/menu-logo.png' %}" alt="Menu logo" title="Menu" class="hamburger-logo"></i>
             </label>
             <ul>
                 <li><a href="#personal-info" onclick="toggleCheckbox()">Home</a></li>
@@ -34,21 +34,21 @@
     </header>
     <section id="personal-info">
         <div>
-            <img src="{% static 'images/profile-picture.webp' %}" alt="Profile picture" class="profile-picture">
+            <img src="{% static 'images/profile-picture.webp' %}" alt="Profile picture" class="profile-picture" title="Profile picture">
         </div>
         <div class="personal-info">
             <h1>Lautaro Reche</h1>
             <h2>Software Developer</h2>
-            <p>Hi! I have experience in developing scripts and web pages using Python and Django. I also worked as a freelance in the optimization of Artificial Intelligence models related to mathematics and programming.</p>
+            <p>Hi! I am a software developer with experience in Python. I also worked in the optimization of Artificial Intelligence models related to mathematics and programming.</p>
             <ul>
                 <li>
                     <a href="https://www.linkedin.com/in/lautaroreche/" target="_blank" rel="noreferrer">
-                        <img src="{% static 'images/linkedin-logo.png' %}" alt="LinkedIn logo" class="logo">
+                        <img src="{% static 'images/linkedin-logo.png' %}" alt="LinkedIn logo" class="logo" title="LinkedIn logo">
                     </a>
                 </li>
                 <li>
                     <a href="https://github.com/lautaroreche" target="_blank" rel="noreferrer">
-                        <img src="{% static 'images/github-logo.png' %}" alt="GitHub logo" class="logo github-logo">
+                        <img src="{% static 'images/github-logo.png' %}" alt="GitHub logo" title="GitHub logo" class="logo github-logo">
                     </a>
                 </li>
             </ul>
@@ -69,14 +69,14 @@
                     </div>
                     {% if  project.public_url %}
                             <a href="{{ project.public_url }}" alt="{{ project.title }}" target="_blank" rel="noreferrer">
-                                <img src="{{ project.image.url }}" alt="Picture of project {{ project.title }}" class="project-image">
+                                <img src="{{ project.image.url }}" alt="Picture of project {{ project.title }}" title="Project {{ project.title }}" class="project-image">
                             </a>
                         {% else %}
-                            <img src="{{ project.image.url }}" alt="Picture of project {{ project.title }}" class="project-image">
+                            <img src="{{ project.image.url }}" alt="Picture of project {{ project.title }}" class="project-image" title="Project {{ project.title }}">
                         {% endif %}
                     <div class="card-detail">
                         <a href="{{ project.repo_url }}" target="_blank" rel="noreferrer">
-                            <img src="{% static 'images/github-logo.png' %}" class="github-logo-card" alt="GitHub logo">
+                            <img src="{% static 'images/github-logo.png' %}" class="github-logo-card" alt="GitHub logo" title="GitHub repository of the project {{ project.title }}">
                         </a>
                         <div class="tags">
                             {% for key, value in project_tags_dict %}
@@ -98,7 +98,7 @@
         <div class="technologies-list">
             {% for technology in technologies %}
                 <div class="technology-detail">
-                    <img src="{{ technology.image.url }}" alt="{{ technology.name }}" class="logo technology-logo">
+                    <img src="{{ technology.image.url }}" alt="{{ technology.name }}" class="logo technology-logo" title="{{ technology.name }}">
                     <p>{{ technology.name }}</p>
                 </div>
             {% endfor %}
@@ -112,7 +112,7 @@
             {% for work_experience in work_experiences %}
                 <div class="work-experience-card">
                     <div class="work-experience-detail">
-                        <img src="{{ work_experience.image.url }}" alt="{{ work_experience.name }} logo">
+                        <img src="{{ work_experience.image.url }}" alt="{{ work_experience.name }} logo" title="{{ work_experience.name }}">
                         <div class="experience-info">
                             <p class="position-name">{{ work_experience.title }}</p>
                             <p class="company-name">{{ work_experience.company }}</p>
@@ -144,13 +144,13 @@
             <ul>
                 <li>
                     <a href="mailto:lautaroreche1@gmail.com" target="_blank" rel="noreferrer" class="contact-hyperlink">
-                        <img src="{% static 'images/gmail-logo.png' %}" alt="Gmail logo" class="logo">
+                        <img src="{% static 'images/gmail-logo.png' %}" alt="Gmail logo" class="logo" title="Gmail logo">
                         <p>lautaroreche1@gmail.com</p>
                     </a>
                 </li>
                 <li>
                     <a href="https://www.linkedin.com/in/lautaroreche/" target="_blank" rel="noreferrer" class="contact-hyperlink">
-                        <img src="{% static 'images/linkedin-logo.png' %}" alt="LinkedIn logo" class="logo">
+                        <img src="{% static 'images/linkedin-logo.png' %}" alt="LinkedIn logo" class="logo" title="LinkedIn logo">
                         <p>lautaroreche</p>
                     </a>
                 </li>
