@@ -1,7 +1,7 @@
-# Web Page for my personal Portfolio 🌐  
+# Personal Portfolio 🌐  
 
 ## Description ℹ️
-This repository contains the code for a **web page built with HTML and CSS**.
+This repository contains the code for a **my personal portfolio, which is a web page built with Python, Django, PostgreSQL, HTML and CSS**.
 
 ## Features ✨  
 - Clean and modern design.  
@@ -17,12 +17,21 @@ To view and edit the project, you only need:
 1. Clone this repository or download the files manually:  
    ```bash
    git clone https://github.com/lautaroreche/Portfolio.git
-2. Open the `index.html` file in your web browser.
+2. (Recomended) Create a virtual environment:
+   ```bash
+   python -m venv venv
+   venv\bin\activate
+3. Install all the dependencies in the `requeriments.txt` file:
+   ```bash
+   pip install -r requirements.txt
+4. Execute:
+   ```bash
+   python manage.py runserver
 
 ## Customization 🎨
 You can modify the styles and structure of the page by editing the following files:
-- `index.html` → Main structure of the webpage.
-- `styles.css` → Styling and visual design.
+- Templates in the `templates` folder → Structure of the webpage.
+- Styles in the `styles` → Styling and visual design.
 
 ## Contact 📧
 If you have any questions or comments, feel free to contact me:
