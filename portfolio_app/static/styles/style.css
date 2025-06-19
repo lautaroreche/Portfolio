@@ -118,8 +118,8 @@ hr {
     height: 30px;
 }
 
-.small-logo:hover {
-    transform: scale(1.1);
+.detail-list ul li:hover, nav ul li:hover {
+    transform: scale(1.05);
     transition: transform 0.5s ease;
 }
 
