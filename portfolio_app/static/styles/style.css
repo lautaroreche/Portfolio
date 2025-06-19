@@ -97,13 +97,9 @@ hr {
 }
 
 .detail-list ul li a {
-    color: inherit;
+    color: #333;
     text-decoration: none;
     gap: 5px;
-}
-
-a:visited {
-color: inherit;
 }
 
 .profile-picture {
