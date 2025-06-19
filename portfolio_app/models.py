@@ -22,6 +22,15 @@ class Technology(models.Model):
     def __str__(self):
         return self.name
     
+class SocialMedia(models.Model):
+    id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=100)
+    hyperlink = models.CharField(max_length=100)
+    image = CloudinaryField('image', resource_type='image')
+    
+    def __str__(self):
+        return self.name
+    
 class WorkExperience(models.Model):
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=100)

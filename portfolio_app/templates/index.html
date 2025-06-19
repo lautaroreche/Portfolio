@@ -40,20 +40,18 @@
             <h1>Lautaro Reche</h1>
             <h2>Software Developer</h2>
             <p>Hi! I am a software developer with experience in Python. I also worked in the optimization of Artificial Intelligence models related to mathematics and programming.</p>
-            <ul>
-                <li>
-                    <a href="https://www.linkedin.com/in/lautaroreche/" target="_blank" rel="noreferrer">
-                        <img src="{% static 'images/linkedin-logo.png' %}" alt="LinkedIn logo" class="small-logo" title="LinkedIn logo">
-                        <p>LinkedIn</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/lautaroreche" target="_blank" rel="noreferrer">
-                        <img src="{% static 'images/github-logo.png' %}" alt="GitHub logo" title="GitHub logo" class="small-logo">
-                        <p>GitHub</p>
-                    </a>
-                </li>
-            </ul>
+            <div class="detail-list">
+                <ul>
+                    {% for rrss in social_media %}
+                        <li>
+                            <a href="{{ rrss.hyperlink }}" target="_blank" rel="noreferrer" class="flex-center">
+                                <img src="{{ rrss.image.url }}" alt="{{ rrss.name }}" class="small-logo" title="{{ rrss.name }}">
+                                {{ rrss.name }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
     </section>
     <hr>
@@ -97,14 +95,15 @@
     <hr>
     <section id="technologies">
         <h3>Technologies</h3>
-        <div class="technologies-list">
-            {% for technology in technologies %}
-                <div class="technology-detail">
-                    <img src="{{ technology.image.url }}" alt="{{ technology.name }}" class="logo technology-logo" title="{{ technology.name }}">
-                    <p>{{ technology.name }}</p>
-                </div>
-            {% endfor %}
-        </div>
+        <div class="detail-list flex-center">
+            <ul class="flex-center">
+                {% for technology in technologies %}
+                    <li>
+                        <img src="{{ technology.image.url }}" alt="{{ technology.name }}" class="small-logo" title="{{ technology.name }}">
+                        {{ technology.name }}
+                    </li>
+                {% endfor %}
+            </ul>
         </div>
     </section>
     <hr>
