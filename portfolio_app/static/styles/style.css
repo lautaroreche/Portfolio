@@ -68,13 +68,24 @@ hr {
 }
 
 .personal-info ul {
-    margin-top: 8px;
     display: flex;
-    gap: 15px;
+    gap: 10px;
+}
+
+.personal-info ul li a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    color: #333;
+    padding: 4px 8px;
+    border: 1px solid #777;
+    border-radius: 15px;
+    font-size: 0.9em;
 }
 
 .personal-info p {
-    margin: 5px 0;
+    margin: 5px;
     font-size: 1.1em;
     max-width: 500px;
 }
@@ -88,6 +99,11 @@ hr {
 .logo {
     width: 45px;
     height: 45px;
+}
+
+.small-logo {
+    width: 25px;
+    height: 25px;
 }
 
 .technology-logo:hover {
@@ -205,7 +221,7 @@ h3 {
 .tags span {
     margin: 0 1px;
     padding: 5px;
-    background-color: #444;
+    background-color: #777;
     color: #fff;
     border-radius: 5px;
     font-size: 0.8em;
