@@ -1,3 +1,7 @@
+:root {
+    --main-color: #44aaeefc;
+}
+
 .flex-center {
     display: flex;
     align-items: center;
@@ -38,7 +42,7 @@ nav {
     top: 0;
     width: 100%;
     border-radius: 0 0 50px 50px;
-    background-color: #4aee;
+    background-color: var(--main-color);
     box-shadow: 0 0 10px #bbb;
 }
 
@@ -338,11 +342,11 @@ nav ul li:hover {
         flex-direction: column;
         justify-content: start;
         align-items: center;
-        gap: 30px;
+        gap: 40px;
         position: absolute;
         top: 54px;
         left: 0;
-        background-color: #4aee;
+        background-color: var(--main-color);
         width: 100%;
         border-radius: 0 0 50px 50px;
         box-shadow: 0 5px 10px #bbb;
@@ -452,7 +456,7 @@ nav ul li:hover {
 
     .work-experience-detail {
         padding-bottom: 25px;
-        border-bottom: 1px solid #4aee;
+        border-bottom: 1px solid var(--main-color);
         border-radius: 5px;
         text-align: center;
     }
