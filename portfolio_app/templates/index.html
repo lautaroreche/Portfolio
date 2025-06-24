@@ -15,6 +15,9 @@
     <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
     <link rel="stylesheet" href="{% static 'styles/style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -36,10 +39,10 @@
         <div>
             <img src="{% static 'images/profile-picture.webp' %}" alt="Profile picture" class="profile-picture" title="Profile picture">
         </div>
-        <div class="personal-info">
+        <div class="personal-info flex-col">
             <h1>Lautaro Reche</h1>
             <h2>Software Developer</h2>
-            <p>Hi! I am a Software Developer with 3+ years of experience using Python. Strong background in automation, scripting, data analysis and AI model optimization (RLHF). Proven ability to deliver scalable solutions in agile environments (Scrum and Kanban). Hands-on experience building and maintaining frontend and backend systems using Django, FastAPI and PostgreSQL.</p>
+            <p>Hi! I am a Software Developer with 3+ years of experience using Python. Strong background in automation, scripting, data analysis and AI model optimization (RLHF). Hands-on experience building and maintaining frontend and backend systems using Django, FastAPI and PostgreSQL.</p>
             <div class="detail-list">
                 <ul>
                     {% for rrss in social_media %}
