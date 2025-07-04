@@ -4,7 +4,7 @@
     --dark-color: #111;
     --light-color: #fff;
     --grey-color: #ddd;
-    --distance-top: 200px;
+    --distance-top: 150px;
 }
 
 * {
@@ -131,6 +131,7 @@ nav ul {
 }
 
 #home {
+    padding-top: var(--distance-top);
     background-color: var(--main-color);
     background-image: url('/static/images/banner.png');
     background-position: right;
@@ -344,8 +345,6 @@ h2 {
 
     .hamburger-menu {
         display: flex;
-        justify-content: center;
-        align-items: center;
         cursor: pointer;
         z-index: 1000;
     }
@@ -361,8 +360,12 @@ h2 {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     h1 {
         font-size: 2em;
+    }
+
+    #home {
+        background-image: none;
     }
 }
