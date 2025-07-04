@@ -93,10 +93,10 @@ nav {
     top: 0;
     width: 100%;
     background-color: #fff;
-    box-shadow: 0 0 50px #bbb;
     font-weight: 600;
     z-index: 1001;
     border-bottom: 1px solid #bbb;
+    box-shadow: 0 0 50px #bbb;
 }
 
 .fa-solid {
@@ -311,6 +311,8 @@ h2 {
         gap: 60px;
         transition: right 0.3s ease-in-out;
         z-index: 999;
+        border-left: 1px solid #bbb;
+        box-shadow: 0 0 50px #bbb;
     }
 
     #check-hamburger-menu:checked ~ ul {
