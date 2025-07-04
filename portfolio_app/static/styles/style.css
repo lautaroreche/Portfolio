@@ -17,6 +17,7 @@
 
 html {
     scroll-padding-top: var(--distance-top);
+    scroll-behavior: smooth;
 }
 
 a {
