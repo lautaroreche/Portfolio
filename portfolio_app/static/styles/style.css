@@ -128,12 +128,12 @@ nav ul {
     gap: 30px;
 }
 
-#personal-info {
+#home {
     padding-top: var(--distance-top);
     background: linear-gradient(to right, var(--soft-main-color), var(--soft-main-color)), url("/static/images/background.webp");
 }
 
-.personal-info-section {
+.home-section {
     height: 80vh;
 }
 
