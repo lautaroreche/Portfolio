@@ -79,6 +79,7 @@ if env("DEBUG", default=False):
     ]
 else:
     MIDDLEWARE = [
+        'portfolio_app.middleware.www_redirect.WWWRedirectMiddleware',
         'django.middleware.security.SecurityMiddleware',
         'django.contrib.sessions.middleware.SessionMiddleware',
         'django.middleware.common.CommonMiddleware',
