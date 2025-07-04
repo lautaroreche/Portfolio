@@ -131,6 +131,7 @@ nav ul {
 }
 
 #home {
+    background-color: var(--main-color);
     background-image: url('/static/images/banner.png');
     background-position: right;
     background-repeat: no-repeat;
