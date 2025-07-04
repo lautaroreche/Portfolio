@@ -5,7 +5,8 @@ from cloudinary.models import CloudinaryField
 class Project(models.Model):
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=100)
-    tags = models.CharField(max_length=250)
+    summary = models.CharField(max_length=250)
+    detail = models.CharField(max_length=1000)
     image = CloudinaryField('image', resource_type='image')
     public_url = models.URLField(blank=True)
     repo_url = models.URLField(blank=True)

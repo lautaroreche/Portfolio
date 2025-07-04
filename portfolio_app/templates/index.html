@@ -1,5 +1,6 @@
 {% load static %}
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,97 +12,82 @@
     <meta name="author" content="Lautaro Reche">
     <meta name="robots" content="index, follow">
     <meta name="referrer" content="no-referrer-when-downgrade">
-    <title>Portfolio - Lautaro Reche</title>
+    <title>Lautaro Reche | Software Developer</title>
     <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
     <link rel="stylesheet" href="{% static 'styles/style.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="flex-between">
+            <div class="flex-center gap10">
+                <a href="{% url 'home' %}">
+                    <i class="fa-solid fa-code"></i>
+                    LAUTARO RECHE
+                </a>
+            </div>
             <input type="checkbox" id="check-hamburger-menu">
             <label for="check-hamburger-menu" class="hamburger-menu">
-                <img src="{% static 'images/menu-logo.png' %}" alt="Menu logo" title="Menu" class="hamburger-logo"></i>
+                <i class="fa-solid fa-bars"></i>
             </label>
-            <ul>
-                <li><a href="#personal-info" onclick="toggleCheckbox()">Home</a></li>
-                <li><a href="#projects" onclick="toggleCheckbox()">Projects</a></li>
-                <li><a href="#technologies" onclick="toggleCheckbox()">Technologies</a></li>
-                <li><a href="#experience" onclick="toggleCheckbox()">Experience</a></li>
-                <li><a href="#contact" onclick="toggleCheckbox()">Contact</a></li>
+            <ul class="flex-center">
+                <li><a href="#personal-info" onclick="toggleCheckbox()">HOME</a></li>
+                <li><a href="#projects" onclick="toggleCheckbox()">PROJECTS</a></li>
+                <li><a href="#technologies" onclick="toggleCheckbox()">TECHNOLOGIES</a></li>
+                <li><a href="#experience" onclick="toggleCheckbox()">EXPERIENCE</a></li>
+                <li><a href="#contact" onclick="toggleCheckbox()">CONTACT</a></li>
             </ul>
         </nav>
     </header>
-    <section id="personal-info">
-        <div>
-            <img src="{% static 'images/profile-picture.webp' %}" alt="Profile picture" class="profile-picture" title="Profile picture">
-        </div>
-        <div class="personal-info flex-col">
-            <h1>Lautaro Reche</h1>
-            <h2>Software Developer</h2>
-            <p>Hi! I am a Software Developer with 3+ years of experience using Python. Strong background in automation, scripting, data analysis and AI model optimization (RLHF). Hands-on experience building and maintaining frontend and backend systems using Django, FastAPI and PostgreSQL.</p>
-            <div class="detail-list">
-                <ul>
-                    {% for rrss in social_media %}
-                        <li>
-                            <a href="{{ rrss.hyperlink }}" target="_blank" rel="noreferrer" class="flex-center">
-                                <img src="{{ rrss.image.url }}" alt="{{ rrss.name }}" class="small-logo" title="{{ rrss.name }}">
-                                {{ rrss.name }}
-                            </a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
+    <section id="personal-info" class="flex gap20 personal-info-section">
+        <h1>HI, I'M LAUTARO RECHE</h1>
+        <p class="summary">A Software Developer with background in web development, scripting and AI model optimization</p>
+        <div class="detail-list">
+            <ul class="flex-row gap20">
+                {% for rrss in social_media %}
+                    <li>
+                        <a href="{{ rrss.hyperlink }}" target="_blank" rel="noreferrer" class="flex-center gap10">
+                            <img src="{{ rrss.image.url }}" alt="{{ rrss.name }}" class="small-logo" title="{{ rrss.name }}">
+                            {{ rrss.name }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
         </div>
     </section>
-    <hr>
     <section id="projects"> 
-        <h3>Projects</h3>
-        <div class="cards-container">
+        <h2>PROJECTS</h2>
+        <div class="cards-container flex-center gap50">
             {% for project in projects %}
-                <div class="project-card">
-                    <div class="project-title-container">
-                        {% if  project.public_url %}
-                            <a href="{{ project.public_url }}" alt="{{ project.title }}" target="_blank" rel="noreferrer">{{ project.title }}</a>
-                        {% else %}
-                            <p>{{ project.title }}</p>
-                        {% endif %}
-                    </div>
-                    {% if  project.public_url %}
-                            <a href="{{ project.public_url }}" alt="{{ project.title }}" target="_blank" rel="noreferrer">
-                                <img src="{{ project.image.url }}" alt="Picture of project {{ project.title }}" title="Project {{ project.title }}" class="project-image">
+                <div class="project-card flex-col gap10">
+                    <img src="{{ project.image.url }}" alt="Picture of project {{ project.title }}" class="project-image" title="Project {{ project.title }}">
+                    <div class="info-card-container flex-col gap5">
+                        <div class="flex-center flex-row flex-between">
+                            <p class="project-title">{{ project.title }}</p>
+                            <a href="{{ project.repo_url }}" target="_blank" rel="noreferrer">
+                                <img src="{% static 'images/github-logo2.webp' %}" class="github-logo-card" alt="GitHub logo" title="GitHub repository of the project {{ project.title }}">
                             </a>
-                        {% else %}
-                            <img src="{{ project.image.url }}" alt="Picture of project {{ project.title }}" class="project-image" title="Project {{ project.title }}">
-                        {% endif %}
-                    <div class="card-detail">
-                        <a href="{{ project.repo_url }}" target="_blank" rel="noreferrer">
-                            <img src="{% static 'images/github-logo.png' %}" class="github-logo-card" alt="GitHub logo" title="GitHub repository of the project {{ project.title }}">
-                        </a>
-                        <div class="tags">
-                            {% for key, value in project_tags_dict %}
-                                {% if key == project.id %}
-                                    {% for tag in value %}
-                                        <span>{{ tag }}</span>
-                                    {% endfor %}
-                                {% endif %}
-                            {% endfor %}
                         </div>
+                        <p class="project-summary">{{ project.summary }}</p>
                     </div>
+                    {% if project.public_url %}
+                        <a href="{{ project.public_url }}" alt="{{ project.title }}" target="_blank" rel="noreferrer" class="button-project flex-center">
+                            View project
+                        </a>
+                    {% endif %}
                 </div>
             {% endfor %}
         </div>
     </section>
-    <hr>
     <section id="technologies">
-        <h3>Technologies</h3>
+        <h2>TECHNOLOGIES</h2>
         <div class="detail-list flex-center">
-            <ul class="flex-center">
+            <ul class="flex-center gap20">
                 {% for technology in technologies %}
-                    <li>
+                    <li class="flex-center gap10">
                         <img src="{{ technology.image.url }}" alt="{{ technology.name }}" class="small-logo" title="{{ technology.name }}">
                         {{ technology.name }}
                     </li>
@@ -109,23 +95,20 @@
             </ul>
         </div>
     </section>
-    <hr>
     <section id="experience">
-        <h3>Experience</h3>
-        <div class="cards-container">
+        <h2>EXPERIENCE</h2>
+        <div class="cards-container flex-col gap50">
             {% for work_experience in work_experiences %}
-                <div class="work-experience-card">
-                    <div class="work-experience-detail">
-                        <img src="{{ work_experience.image.url }}" alt="{{ work_experience.name }} logo" title="{{ work_experience.name }}">
-                        <div class="experience-info">
+                <div class="work-experience-card flex-row gap20">
+                    <img src="{{ work_experience.image.url }}" alt="{{ work_experience.name }} logo" title="{{ work_experience.name }}" class="logo">
+                    <div class="flex-col gap20">
+                        <div class="flex-col gap5">
                             <p class="position-name">{{ work_experience.title }}</p>
                             <p class="company-name">{{ work_experience.company }}</p>
                             <p>{{ work_experience.location }}</p>
                             <p>{{ work_experience.start_date }} - {{ work_experience.end_date }}</p>
                         </div>
-                    </div>
-                    <div class="work-experience-tasks">
-                        <ul>
+                        <ul class="flex-col gap5">
                             {% for key, value in work_experience_description_dict %}
                                 {% if key == work_experience.id %}
                                     {% for description in value %}
@@ -141,19 +124,18 @@
             {% endfor %}
         </div>
     </section>
-    <hr>
     <section id="contact">
-        <h3>Contact</h3>
+        <h2>CONTACT</h2>
         <div class="contact-container">
-            <ul>
+            <ul class="flex-col gap20">
                 <li>
-                    <a href="mailto:lautaroreche1@gmail.com" target="_blank" rel="noreferrer" class="contact-hyperlink">
+                    <a href="mailto:lautaroreche1@gmail.com" target="_blank" rel="noreferrer" class="flex-center flex-row gap10">
                         <img src="{% static 'images/gmail-logo.png' %}" alt="Gmail logo" class="logo" title="Gmail logo">
                         <p>lautaroreche1@gmail.com</p>
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.linkedin.com/in/lautaroreche/" target="_blank" rel="noreferrer" class="contact-hyperlink">
+                    <a href="https://www.linkedin.com/in/lautaroreche/" target="_blank" rel="noreferrer" class="flex-center flex-row gap10">
                         <img src="{% static 'images/linkedin-logo.png' %}" alt="LinkedIn logo" class="logo" title="LinkedIn logo">
                         <p>lautaroreche</p>
                     </a>
@@ -162,7 +144,7 @@
         </div>
     </section>
     <footer>
-        <p class="desarrollado">Created by <a href="https://www.linkedin.com/in/lautaroreche/" target="_blank" rel="noreferrer">Lautaro Reche</a></p>
+        <p class="created">Created by <a href="https://www.linkedin.com/in/lautaroreche/" target="_blank" rel="noreferrer">Lautaro Reche</a></p>
     </footer>
 </body>
 </html>
