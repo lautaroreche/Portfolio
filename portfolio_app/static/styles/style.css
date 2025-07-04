@@ -1,5 +1,6 @@
 :root {
     --main-color: #7843E9;
+    --soft-main-color: rgba(120, 67, 233, 0.4);
     --dark-color: #111;
     --light-color: #fff;
     --grey-color: #ddd;
@@ -128,7 +129,7 @@ nav ul {
 
 #personal-info {
     padding-top: var(--distance-top);
-    background: linear-gradient(to right, rgba(120, 67, 233, 0.2), rgba(120, 67, 233, 0.2)), url("/static/images/background.webp");
+    background: linear-gradient(to right, var(--soft-main-color), var(--soft-main-color)), url("/static/images/background.webp");
 }
 
 .personal-info-section {
@@ -149,7 +150,6 @@ nav ul {
     padding: 7px 12px;
     border: 1px solid #777;
     border-radius: 10px;
-    box-shadow: 0 0 5px var(--grey-color);
     transition: box-shadow 0.5s ease;
 }
 
@@ -236,7 +236,7 @@ h2 {
 }
 
 #technologies, #contact {
-    background-color: rgba(120, 67, 233, 0.2);
+    background-color: var(--soft-main-color);
 }
 
 .work-experience-card, #technologies .detail-list {
