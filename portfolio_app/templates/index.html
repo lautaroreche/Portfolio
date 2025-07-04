@@ -23,12 +23,10 @@
 <body>
     <header>
         <nav class="flex-between">
-            <div class="flex-center gap10">
-                <a href="{% url 'home' %}">
-                    <i class="fa-solid fa-code"></i>
-                    LAUTARO RECHE
-                </a>
-            </div>
+            <a href="{% url 'home' %}" class="flex-center gap10">
+                <img src="{% static 'images/logo.png' %}" class="small-logo personal-logo" title="Logo">
+                LAUTARO RECHE
+            </a>
             <input type="checkbox" id="check-hamburger-menu">
             <label for="check-hamburger-menu" class="hamburger-menu">
                 <i class="fa-solid fa-bars"></i>
@@ -65,19 +63,17 @@
                 <div class="project-card flex-col gap10">
                     <img src="{{ project.image.url }}" alt="Picture of project {{ project.title }}" class="project-image" title="Project {{ project.title }}">
                     <div class="info-card-container flex-col gap5">
-                        <div class="flex-center flex-row flex-between">
-                            <p class="project-title">{{ project.title }}</p>
-                            <a href="{{ project.repo_url }}" target="_blank" rel="noreferrer">
-                                <img src="{% static 'images/github-logo2.webp' %}" class="github-logo-card" alt="GitHub logo" title="GitHub repository of the project {{ project.title }}">
-                            </a>
-                        </div>
+                        <p class="project-title">{{ project.title }}</p>
                         <p class="project-summary">{{ project.summary }}</p>
                     </div>
                     {% if project.public_url %}
-                        <a href="{{ project.public_url }}" alt="{{ project.title }}" target="_blank" rel="noreferrer" class="button-project flex-center">
+                        <a href="{{ project.public_url }}" alt="{{ project.title }}" target="_blank" rel="noreferrer" class="button-project button-project-web flex-center">
                             View project
                         </a>
                     {% endif %}
+                    <a href="{{ project.repo_url }}" alt="{{ project.title }}" target="_blank" rel="noreferrer" class="button-project button-project-github flex-center">
+                        View GitHub
+                    </a>
                 </div>
             {% endfor %}
         </div>
