@@ -93,11 +93,11 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #fff;
+    background-color: #f2f2f2;
     font-weight: 600;
     z-index: 1001;
-    border-bottom: 1px solid #bbb;
-    box-shadow: 0 0 50px #bbb;
+    border-bottom: 1px solid var(--light-color);
+    box-shadow: 0 0 50px var(--light-color);
 }
 
 nav img {
@@ -114,11 +114,11 @@ nav img {
     font-size: 1.8rem;
 }
 
-nav a, .created a  {
+nav a {
     transition: color 0.5s ease;
 }
 
-nav a:hover, .created a:hover {
+nav a:hover {
     color: var(--main-color);
 }
 
@@ -134,6 +134,7 @@ nav ul {
     padding-top: var(--distance-top);
     background-color: var(--main-color);
     background-image: url('/static/images/banner.png');
+    background-size: cover;
     background-position: right;
     background-repeat: no-repeat;
 }
@@ -158,7 +159,7 @@ nav ul {
 
 .detail-list ul li {
     padding: 7px 12px;
-    border: 1px solid #777;
+    border: 1px solid var(--grey-color);
     border-radius: 10px;
     transition: box-shadow 0.5s ease;
     background-color: var(--main-color);
@@ -255,7 +256,7 @@ h2 {
 }
 
 .button-project:hover {
-    box-shadow: 0 0 3px var(--main-color);
+    box-shadow: 0 0 5px var(--main-color);
 }
 
 .work-experience-card, #technologies .detail-list {
@@ -336,11 +337,11 @@ h2 {
 
     #check-hamburger-menu:checked ~ ul {
         right: 0;
-        box-shadow: 0 0 50px #bbb;
+        box-shadow: 0 0 50px var(--light-color);
     }
 
     #check-hamburger-menu:checked + .hamburger-menu i {
-        color: white;
+        color: var(--light-color);
     }
 
     .hamburger-menu {
@@ -363,9 +364,5 @@ h2 {
 @media (max-width: 700px) {
     h1 {
         font-size: 2em;
-    }
-
-    #home {
-        background-image: none;
     }
 }
