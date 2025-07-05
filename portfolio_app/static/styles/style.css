@@ -97,7 +97,7 @@ nav {
     font-weight: 600;
     z-index: 1001;
     border-bottom: 1px solid var(--grey-color);
-    box-shadow: 0 0 50px var(--light-color);
+    box-shadow: 0 0 10px var(--light-color);
 }
 
 nav img {
@@ -351,12 +351,12 @@ h2 {
         gap: 60px;
         transition: right 0.5s ease-in-out;
         z-index: 999;
-        border-left: 1px solid #bbb;
+        border-left: 1px solid var(--grey-color);
     }
 
     #check-hamburger-menu:checked ~ ul {
         right: 0;
-        box-shadow: 0 0 50px var(--light-color);
+        box-shadow: 0 0 10px var(--light-color);
     }
 
     #check-hamburger-menu:checked + .hamburger-menu i {
