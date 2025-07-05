@@ -96,7 +96,7 @@ nav {
     background-color: #f2f2f2;
     font-weight: 600;
     z-index: 1001;
-    border-bottom: 1px solid var(--light-color);
+    border-bottom: 1px solid var(--grey-color);
     box-shadow: 0 0 50px var(--light-color);
 }
 
@@ -207,7 +207,6 @@ h2 {
 
 .project-card {
     width: 320px;
-    height: 100%;
 }
 
 .project-card p {
@@ -215,26 +214,46 @@ h2 {
 }
 
 .project-title {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 600;
 }
 
 .project-summary {
-    height: 70px;
+    font-size: 1.2rem;
 }
 
-.project-image {
+.project-card-img-container img {
     width: 100%;
+    height: 100%;
     border-radius: 10px;
+    transition: opacity 0.5s ease;
+    object-fit: cover;
 }
 
-.github-logo-card {
-    width: 30px;
-    height: 30px;
+.project-card-img-container {
+    position: relative;
 }
 
-.info-card-container {
-    padding: 0 5px;
+.project-info {
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    color: var(--light-color);
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.project-card:hover .project-info {
+    opacity: 1;
+}
+
+.project-card:hover .project-card img {
+    opacity: 0;
 }
 
 .button-project {
@@ -330,7 +349,7 @@ h2 {
         background-color: var(--main-color);
         flex-direction: column;
         gap: 60px;
-        transition: right 0.3s ease-in-out;
+        transition: right 0.5s ease-in-out;
         z-index: 999;
         border-left: 1px solid #bbb;
     }
