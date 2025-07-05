@@ -133,10 +133,6 @@ nav ul {
 #home {
     padding-top: var(--distance-top);
     background-color: var(--main-color);
-    background-image: url('/static/images/banner.png');
-    background-size: cover;
-    background-position: right;
-    background-repeat: no-repeat;
 }
 
 #technologies, #contact {
@@ -162,7 +158,6 @@ nav ul {
     border: 1px solid var(--grey-color);
     border-radius: 10px;
     transition: box-shadow 0.5s ease;
-    background-color: var(--main-color);
 }
 
 .detail-list ul li a {
@@ -341,6 +336,8 @@ h2 {
 
 @media (max-width: 800px) {
     nav ul {
+        justify-content: left;
+        align-items: end;
         position: fixed;
         top: 0;
         right: -50%;
