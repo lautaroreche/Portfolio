@@ -353,7 +353,6 @@ h2 {
 
     #check-hamburger-menu:checked ~ ul {
         right: 0;
-        box-shadow: 0 0 10px var(--light-color);
     }
 
     #check-hamburger-menu:checked + .hamburger-menu i {
