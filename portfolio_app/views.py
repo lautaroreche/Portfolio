@@ -3,7 +3,7 @@ from .models import Project, Technology, WorkExperience, SocialMedia
 
 
 def home(request):
-    projects = Project.objects.all().reverse()
+    projects = Project.objects.all()
     technologies = Technology.objects.all()
     work_experiences = WorkExperience.objects.all()
     social_media = SocialMedia.objects.all()
