@@ -114,7 +114,6 @@ nav {
     font-weight: 600;
     z-index: 1001;
     border-bottom: 1px solid var(--grey-color);
-    box-shadow: 0 0 10px var(--light-color);
 }
 
 nav img, .fa-solid {
@@ -136,7 +135,7 @@ nav ul {
 .fa-bars {
     color: var(--dark-color);
     transition: color 0.5s ease;
-    font-size: var(--font-lg);
+    font-size: var(--large-font-size);
 }
 
 #home, #technologies, #contact {
@@ -340,6 +339,14 @@ h2 {
 .created a {
     color: var(--light-color);
     text-decoration: none;
+}
+
+.tag {
+    padding: 3px;
+    background-color: var(--soft-main-color);
+    color: var(--light-color);
+    border-radius: 7px;
+    font-size: 0.7rem;
 }
 
 

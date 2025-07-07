@@ -68,6 +68,11 @@
                             <p class="project-summary">{{ project.summary }}</p>
                         </div>
                     </div>
+                    <div class="tags">
+                        {% for tag in project.get_tags %}
+                            <span class="tag">{{ tag }}</span>
+                        {% endfor %}
+                    </div>
                     {% if project.public_url %}
                         <a href="{{ project.public_url }}" alt="{{ project.title }}" target="_blank" rel="noreferrer" class="button-project button-project-web flex-center">
                             View project
