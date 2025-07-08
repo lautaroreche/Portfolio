@@ -1,45 +1,8 @@
+{% extends "base.html" %}
 {% load static %}
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Portfolio web de Lautaro Reche">
-    <meta name="keywords" content="portfolio, web developer, web design, programming, font-end development, HTML, CSS, web projects, UI/UX design, web applications, software development, freelance programming, tech solutions, developer portfolio, programming projects, personal portfolio">
-    <meta name="author" content="Lautaro Reche">
-    <meta name="robots" content="index, follow">
-    <meta name="referrer" content="no-referrer-when-downgrade">
-    <title>Lautaro Reche | Software Developer</title>
-    <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <nav class="flex-between">
-            <a href="{% url 'home' %}" class="flex-center gap10">
-                <img src="{% static 'images/logo.png' %}" class="small-logo personal-logo" title="Logo">
-                LAUTARO RECHE
-            </a>
-            <input type="checkbox" id="check-hamburger-menu">
-            <label for="check-hamburger-menu" class="hamburger-menu">
-                <i class="fa-solid fa-bars"></i>
-            </label>
-            <ul class="flex-center">
-                <li><a href="#home" onclick="toggleCheckbox()">HOME</a></li>
-                <li><a href="#projects" onclick="toggleCheckbox()">PROJECTS</a></li>
-                <li><a href="#technologies" onclick="toggleCheckbox()">TECHNOLOGIES</a></li>
-                <li><a href="#experience" onclick="toggleCheckbox()">EXPERIENCE</a></li>
-                <li><a href="#contact" onclick="toggleCheckbox()">CONTACT</a></li>
-            </ul>
-        </nav>
-    </header>
+{% block content %}
     <section id="home" class="flex gap20 home-section">
         <h1 class="animate-on-scroll">HI, I'M LAUTARO RECHE</h1>
         <p class="summary">A Software Developer with background in web development, scripting and AI model optimization</p>
@@ -56,35 +19,9 @@
             </ul>
         </div>
     </section>
-    <section id="projects"> 
-        <h2 class="animate-on-scroll">PROJECTS</h2>
-        <div class="cards-container flex-center gap50">
-            {% for project in projects %}
-                <div class="project-card flex-col gap10">
-                    <div class="project-card-img-container">
-                        <img src="{{ project.image.url }}" alt="Picture of project {{ project.title }}" title="Project {{ project.title }}">
-                        <div class="project-info flex-center flex-col gap20">
-                            <h3 class="project-title">{{ project.title }}</h3>
-                            <p class="project-summary">{{ project.summary }}</p>
-                        </div>
-                    </div>
-                    <div class="tags">
-                        {% for tag in project.get_tags %}
-                            <span class="tag">{{ tag }}</span>
-                        {% endfor %}
-                    </div>
-                    {% if project.public_url %}
-                        <a href="{{ project.public_url }}" alt="{{ project.title }}" target="_blank" rel="noreferrer" class="button-project button-project-web flex-center">
-                            View project
-                        </a>
-                    {% endif %}
-                    <a href="{{ project.repo_url }}" alt="{{ project.title }}" target="_blank" rel="noreferrer" class="button-project button-project-github flex-center">
-                        View GitHub
-                    </a>
-                </div>
-            {% endfor %}
-        </div>
-    </section>
+    
+    {% include "projects.html" %}
+
     <section id="technologies">
         <h2 class="animate-on-scroll">TECHNOLOGIES</h2>
         <div class="detail-list flex-center">
@@ -127,48 +64,4 @@
             {% endfor %}
         </div>
     </section>
-    <section id="contact">
-        <h2 class="animate-on-scroll">CONTACT</h2>
-        <div class="contact-container">
-            <ul class="flex-col gap20">
-                <li>
-                    <a href="mailto:lautaroreche1@gmail.com" target="_blank" rel="noreferrer" class="flex-center flex-row gap10">
-                        <img src="{% static 'images/gmail-logo.png' %}" alt="Gmail logo" class="logo" title="Gmail logo">
-                        <p>lautaroreche1@gmail.com</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/lautaroreche/" target="_blank" rel="noreferrer" class="flex-center flex-row gap10">
-                        <img src="{% static 'images/linkedin-logo.png' %}" alt="LinkedIn logo" class="logo" title="LinkedIn logo">
-                        <p>lautaroreche</p>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <footer>
-        <p class="created">Created by <a href="https://www.linkedin.com/in/lautaroreche/" target="_blank" rel="noreferrer">Lautaro Reche</a></p>
-    </footer>
-</body>
-</html>
-
-<script>
-    function toggleCheckbox() {
-        document.getElementById('check-hamburger-menu').checked = false;
-    }
-</script>
-
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1 });
-    
-        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
-    });
-</script>
+{% endblock %}

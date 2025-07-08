@@ -12,10 +12,20 @@ def home(request):
     for work_experience in work_experiences:
         work_experience_description_dict[work_experience.id] = work_experience.description.split('.')
 
-    return render(request, 'index.html', {
+    context = {
         "projects": projects,
         "technologies": technologies,
         "social_media": social_media,
         "work_experiences": work_experiences,
         "work_experience_description_dict": work_experience_description_dict.items(),
-    })
+    }
+    
+    return render(request, 'index.html', context)
+
+
+def frontend(requests):
+    projects = Project.objects.filter(type='frontend')
+    context = {
+        "projects": projects,
+    }
+    return render(requests, 'frontend.html', context)

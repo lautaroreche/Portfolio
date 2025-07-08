@@ -1,0 +1,29 @@
+<main id="projects"> 
+    <h2 class="animate-on-scroll">PROJECTS</h2>
+    <div class="cards-container flex-center gap50">
+        {% for project in projects %}
+            <div class="project-card flex-col gap10">
+                <div class="project-card-img-container">
+                    <img src="{{ project.image.url }}" alt="Picture of project {{ project.title }}" title="Project {{ project.title }}">
+                    <div class="project-info flex-center flex-col gap20">
+                        <h3 class="project-title">{{ project.title }}</h3>
+                        <p class="project-summary">{{ project.summary }}</p>
+                    </div>
+                </div>
+                <div class="tags">
+                    {% for tag in project.get_tags %}
+                        <span class="tag">{{ tag }}</span>
+                    {% endfor %}
+                </div>
+                {% if project.public_url %}
+                    <a href="{{ project.public_url }}" alt="{{ project.title }}" target="_blank" rel="noreferrer" class="button-project button-project-web flex-center">
+                        View project
+                    </a>
+                {% endif %}
+                <a href="{{ project.repo_url }}" alt="{{ project.title }}" target="_blank" rel="noreferrer" class="button-project button-project-github flex-center">
+                    View GitHub
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</main>

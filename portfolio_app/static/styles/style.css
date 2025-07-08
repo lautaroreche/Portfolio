@@ -91,7 +91,7 @@ ul {
     gap: 50px;
 }
 
-section {
+section, main {
     padding: 80px 30px;
     display: flex;
     justify-content: center;
