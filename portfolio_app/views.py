@@ -3,7 +3,7 @@ from .models import Project, Technology, WorkExperience, SocialMedia
 
 
 def home(request):
-    projects = Project.objects.all()
+    projects = Project.objects.filter(type__in=['frontend', 'backend'])
     technologies = Technology.objects.all()
     work_experiences = WorkExperience.objects.all()
     social_media = SocialMedia.objects.all()
@@ -24,7 +24,7 @@ def home(request):
 
 
 def frontend(requests):
-    projects = Project.objects.filter(type='frontend')
+    projects = Project.objects.filter(type__in=['frontend', 'web-portfolio'])
     context = {
         "projects": projects,
     }

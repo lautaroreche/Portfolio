@@ -6,13 +6,14 @@ class Project(models.Model):
     TYPE_CHOICES = [
         ('frontend', 'Frontend'),
         ('backend', 'Backend'),
+        ('web-portfolio', 'Web portfolio'),
     ]
 
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=100)
     summary = models.CharField(max_length=250)
     tags = models.CharField(max_length=100)
-    type = models.CharField(max_length=50, choices=TYPE_CHOICES, default='frontend',)
+    type = models.CharField(max_length=50, choices=TYPE_CHOICES, default='frontend')
     image = CloudinaryField('image', resource_type='image')
     public_url = models.URLField(blank=True)
     repo_url = models.URLField(blank=True)
