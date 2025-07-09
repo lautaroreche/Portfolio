@@ -1,6 +1,5 @@
 :root {
     --main-color: #26266c;
-    --soft-main-color: #7843e966;
     --dark-color: #111;
     --light-color: #fff;
     --grey-color: #ddd;
@@ -144,11 +143,22 @@ nav ul {
 
 #home {
     padding-top: var(--distance-top);
-    background-color: var(--main-color);
+    background-image: linear-gradient(#26266cf5, #26266cf5), url('/static/images/background.png');
+    background-size: cover;
+    background-position: center;
+
 }
 
-#technologies, #contact {
-    background-color: var(--main-color);
+#technologies {
+    background-image: linear-gradient(#26266cf5, #26266cf5), url('/static/images/background.png');
+    background-size: cover;
+    background-position: start;
+}
+
+#contact {
+    background-image: linear-gradient(#26266cf5, #26266cf5), url('/static/images/background.png');
+    background-size: cover;
+    background-position: end;
 }
 
 .home-section {
@@ -248,7 +258,7 @@ h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(8px);
     color: var(--light-color);
     text-align: center;
@@ -342,10 +352,10 @@ h2 {
 }
 
 .tag {
-    padding: 3px;
-    background-color: var(--soft-main-color);
+    padding: 4px 5px;
+    background-color: var(--main-color);
     color: var(--light-color);
-    border-radius: 7px;
+    border-radius: 5px;
     font-size: 0.7rem;
 }
 
