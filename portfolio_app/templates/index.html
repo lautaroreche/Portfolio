@@ -45,8 +45,8 @@
                         <div class="flex-col gap5">
                             <p class="position-name">{{ work_experience.title }}</p>
                             <p class="company-name">{{ work_experience.company }}</p>
-                            <p>{{ work_experience.location }}</p>
-                            <p>{{ work_experience.start_date }} - {{ work_experience.end_date }}</p>
+                            <p class="company-location">{{ work_experience.location }}</p>
+                            <p class="company-dates">{{ work_experience.start_date }} - {{ work_experience.end_date }}</p>
                         </div>
                         <ul class="flex-col gap5">
                             {% for key, value in work_experience_description_dict %}

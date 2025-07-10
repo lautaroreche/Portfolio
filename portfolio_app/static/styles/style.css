@@ -3,10 +3,10 @@
     --dark-color: #111;
     --light-color: #fff;
     --grey-color: #ddd;
-    --small-font-size: 1.1rem;
-    --medium-font-size: 1.2rem;
-    --large-font-size: 1.6rem;
-    --xlarge-font-size: 2rem;
+    --m-font-size: 1.2rem;
+    --l-font-size: 1.5rem;
+    --xl-font-size: 1.8rem;
+    --xxl-font-size: 2rem;
     --small-border-radius: 3px;
     --normal-border-radius: 10px;
     --distance-top: 150px;
@@ -134,7 +134,7 @@ nav ul {
 .fa-bars {
     color: var(--dark-color);
     transition: color 0.5s ease;
-    font-size: var(--large-font-size);
+    font-size: var(--xxl-font-size);
 }
 
 #home, #technologies, #contact {
@@ -166,7 +166,7 @@ nav ul {
 }
 
 .summary {
-    font-size: var(--medium-font-size);
+    font-size: var(--m-font-size);
     max-width: 500px;
     text-align: center;
 }
@@ -180,6 +180,7 @@ nav ul {
     border: 1px solid var(--grey-color);
     border-radius: var(--normal-border-radius);
     transition: box-shadow 0.5s ease;
+    font-size: 1.1rem;
 }
 
 .detail-list ul li a {
@@ -205,14 +206,14 @@ nav ul {
 }
 
 h1 {
-    font-size: 2.7em;
+    font-size: 2.7rem;
     font-weight: 600;
     text-align: center;
 }
 
 h2 {
     margin-bottom: 10px;
-    font-size: var(--xlarge-font-size);
+    font-size: var(--xxl-font-size);
     font-weight: 600;
 }
 
@@ -231,12 +232,12 @@ h2 {
 }
 
 .project-title {
-    font-size: var(--large-font-size);
+    font-size: var(--l-font-size);
     font-weight: 600;
 }
 
 .project-summary {
-    font-size: var(--medium-font-size);
+    font-size: var(--m-font-size);
 }
 
 .project-card-img-container img {
@@ -283,7 +284,7 @@ h2 {
     border-radius: 10px;
     color: var(--light-color);
     transition: box-shadow 0.5s ease;
-    font-size: var(--small-font-size);
+    font-size: var(--m-font-size);
 }
 
 .button-project-web {
@@ -306,7 +307,7 @@ h2 {
     position: relative;
     padding-left: 1.2em;
     text-indent: 0;
-    font-size: var(--small-font-size);
+    line-height: 1.4rem;
 }
 
 .work-experience-card ul li::before {
@@ -314,16 +315,20 @@ h2 {
     position: absolute;
     left: 0;
     top: 0;
-    font-size: var(--medium-font-size);
-    line-height: 1.2;
+    font-size: var(--m-font-size);
+    line-height: 1.4rem;
 }
 
 .position-name {
-    font-size: var(--large-font-size);
+    font-size: var(--l-font-size);
 }
 
 .company-name {
-    font-size: var(--medium-font-size);
+    font-size: var(--m-font-size);
+}
+
+.company-location, .company-dates {
+    font-size: 1.1rem
 }
 
 .contact-container {
@@ -335,8 +340,8 @@ h2 {
 }
 
 .contact-container p {
-    font-size: var(--medium-font-size);
     color: var(--light-color);
+    font-size: var(--l-font-size);
 }
 
 .created {
@@ -411,6 +416,6 @@ h2 {
 
 @media (max-width: 700px) {
     h1 {
-        font-size: 2em;
+        font-size: var(--xxl-font-size)
     }
 }
