@@ -254,6 +254,23 @@ h2 {
     position: relative;
 }
 
+.project-card-type {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 7px 20px;
+    width: auto;
+    color: var(--light-color);
+    background-color: var(--main-color);
+    border-radius: var(--normal-border-radius) 0 20px 0;
+}
+
+.tags-container {
+    position: absolute;
+    bottom: 9px;
+    right: 7px;
+}
+
 .project-info {
     padding: 20px;
     justify-content: baseline;
@@ -289,11 +306,11 @@ h2 {
     font-size: var(--m-font-size);
 }
 
-.button-project-web {
+.button-project-main {
     background-color: var(--main-color);
 }
 
-.button-project-github {
+.button-project-dark {
     background-color: var(--dark-color);
 }
 

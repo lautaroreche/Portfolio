@@ -23,9 +23,9 @@ def home(request):
     return render(request, 'index.html', context)
 
 
-def frontend(requests):
+def web(requests):
     projects = Project.objects.filter(type__in=['frontend', 'web-portfolio'])
     context = {
         "projects": projects,
     }
-    return render(requests, 'frontend.html', context)
+    return render(requests, 'web.html', context)
