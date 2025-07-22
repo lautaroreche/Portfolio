@@ -14,10 +14,12 @@ class Project(models.Model):
     summary = models.CharField(max_length=250)
     tags = models.CharField(max_length=100)
     type = models.CharField(max_length=50, choices=TYPE_CHOICES, default='frontend')
-    image = CloudinaryField('image', resource_type='image')
     public_url = models.URLField(blank=True)
     repo_url = models.URLField(blank=True)
     order = models.IntegerField(default=0)
+    image = CloudinaryField('image', resource_type='image', blank=True, null=True)
+    image2 = CloudinaryField('image2', resource_type='image', blank=True, null=True)
+    image3 = CloudinaryField('image3', resource_type='image', blank=True, null=True)
     
     def __str__(self):
         return self.title
