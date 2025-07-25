@@ -88,5 +88,30 @@
             document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
         });
     </script>
+
+    <script>
+        const indicesActuales = new WeakMap();
+        function cambiarImagen(button, direccion) {
+            const card = button.closest('.project-card');
+            const img = card.querySelector('.carousel-img');
+            const data = card.dataset.images;
+            if (!data) return;
+            let images;
+            try {
+                images = JSON.parse(data);
+            } catch (e) {
+                console.error("Error al parsear las imágenes:", e);
+                return;
+            }
+            if (!images || images.length <= 1) return;
+            if (!indicesActuales.has(card)) {
+                indicesActuales.set(card, 0);
+            }
+            let index = indicesActuales.get(card);
+            index = (index + direccion + images.length) % images.length;
+            img.src = images[index];
+            indicesActuales.set(card, index);
+        }
+    </script>
 </body>
 </html>
