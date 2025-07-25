@@ -32,11 +32,11 @@
                 <i class="fa-solid fa-bars"></i>
             </label>
             <ul class="flex-center">
-                <li><a href="#home" onclick="toggleCheckbox()">HOME</a></li>
-                <li><a href="#projects" onclick="toggleCheckbox()">PROJECTS</a></li>
-                <li><a href="#technologies" onclick="toggleCheckbox()">TECHNOLOGIES</a></li>
-                <li><a href="#experience" onclick="toggleCheckbox()">EXPERIENCE</a></li>
-                <li><a href="#contact" onclick="toggleCheckbox()">CONTACT</a></li>
+                <li><a href="{% url 'home' %}#home" onclick="toggleCheckbox()">HOME</a></li>
+                <li><a href="{% url 'home' %}#projects" onclick="toggleCheckbox()">PROJECTS</a></li>
+                <li><a href="{% url 'home' %}#technologies" onclick="toggleCheckbox()">TECHNOLOGIES</a></li>
+                <li><a href="{% url 'home' %}#experience" onclick="toggleCheckbox()">EXPERIENCE</a></li>
+                <li><a href="{% url 'home' %}#contact" onclick="toggleCheckbox()">CONTACT</a></li>
             </ul>
         </nav>
     </header>
