@@ -1,8 +1,11 @@
+{% load custom_filters %}
+
+
 <main id="projects"> 
     <h2 class="animate-on-scroll">PROJECTS</h2>
     <div class="cards-container flex-center gap50">
         {% for project in projects %}
-            <div class="project-card flex-col gap10">
+            <div class="project-card flex-col gap10" data-images='{{ images_json|dict_key:project.id|safe }}'>
                 <div class="project-card-img-container">
                     <p class="project-card-type">
                         {% if project.type == 'backend' %}
@@ -11,16 +14,26 @@
                             Frontend
                         {% endif %}
                     </p>
-                    <img src="{{ project.image.url }}" alt="Picture of project {{ project.title }}" title="Project {{ project.title }}">
+                    {% if project.image2 or project.image3 %}
+                        <button class="carousel-arrow left" onclick="cambiarImagen(this, -1)">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-arrow right" onclick="cambiarImagen(this, 1)">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    {% endif %}
+                    <img class="carousel-img" src="{{ project.image.url }}" alt="Picture of project {{ project.title }}" title="Project {{ project.title }}">
                     <div class="tags-container">
                         {% for tag in project.get_tags %}
                             <span class="tag">{{ tag }}</span>
                         {% endfor %}
                     </div>
+                    <!--
                     <div class="project-info flex-col gap20">
                         <h3 class="project-title">{{ project.title }}</h3>
                         <p class="project-summary">{{ project.summary }}</p>
                     </div>
+                    -->
                 </div>
                 {% if project.public_url %}
                     <a href="{{ project.public_url }}" alt="{{ project.title }}" target="_blank" rel="noreferrer" class="button-project button-project-main flex-center">
