@@ -16,7 +16,7 @@ def get_project_images(projects):
 
 
 def home(request):
-    projects = Project.objects.filter(type__in=['frontend', 'backend'])
+    projects = Project.objects.all()
     technologies = Technology.objects.all()
     work_experiences = WorkExperience.objects.all()
     social_media = SocialMedia.objects.all()
