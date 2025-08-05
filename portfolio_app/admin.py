@@ -5,7 +5,7 @@ from django.contrib.sessions.models import Session
 
 class ProjectAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'tags', 'type', 'repo_url', 'order')
-    search_fields = ('title', 'summary', 'tags', 'type', 'repo_url')
+    search_fields = ('title', 'tags', 'type', 'repo_url')
 
 
 class TechnologyAdmin(admin.ModelAdmin):
