@@ -4,23 +4,23 @@ from django.contrib.sessions.models import Session
 
 
 class ProjectAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'summary', 'tags', 'type', 'image', 'repo_url', 'order')
-    search_fields = ('id', 'title', 'summary', 'tags', 'type', 'image', 'repo_url', 'order')
+    list_display = ('id', 'title', 'tags', 'type', 'repo_url', 'order')
+    search_fields = ('title', 'summary', 'tags', 'type', 'repo_url')
 
 
 class TechnologyAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'image', 'order')
-    search_fields = ('id', 'name', 'image', 'order')
+    list_display = ('id', 'name', 'order')
+    search_fields = ('name',)
 
 
 class WorkExperienceAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'company', 'location', 'start_date', 'end_date', 'image', 'description', 'order')
-    search_fields = ('id', 'title', 'company', 'location', 'start_date', 'end_date', 'image', 'description', 'order')
+    list_display = ('id', 'title', 'company', 'location', 'start_date', 'end_date', 'description', 'order')
+    search_fields = ('title', 'company', 'location', 'description')
 
 
 class SocialMediaAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'image', 'hyperlink', 'order')
-    search_fields = ('id', 'name', 'image', 'hyperlink', 'order')
+    list_display = ('id', 'name', 'hyperlink', 'order')
+    search_fields = ('name', 'hyperlink')
 
 
 admin.site.register(Session)

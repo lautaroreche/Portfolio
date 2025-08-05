@@ -1,0 +1,32 @@
+{% load static %}
+
+
+<section id="experience" class="flex flex-col items-center gap-12 p-12">
+    <h2 class="text-3xl md:text-4xl text-center font-semibold">Experience</h2>
+    <div class="flex flex-col items-center gap-14">
+        {% for work_experience in work_experiences %}
+            <div class="flex flex-col md:flex-row gap-4 w-full max-w-[800px]">
+                <img src="{{ work_experience.image.url }}" alt="{{ work_experience.name }} logo" class="size-16 rounded-lg">
+                <div class="flex flex-col gap-4">
+                    <div class="flex flex-col gap-1 md:text-lg">
+                        <p class="text-2xl">{{ work_experience.title }}</p>
+                        <p>{{ work_experience.company }}</p>
+                        <p class="text-gray-700">{{ work_experience.start_date }} - {{ work_experience.end_date }}</p>
+                        <p class="text-gray-700">{{ work_experience.location }}</p>
+                    </div>
+                    <ul class="!list-disc pl-5 md:text-lg space-y-1">
+                        {% for key, value in work_experience_description_dict %}
+                            {% if key == work_experience.id %}
+                                {% for description in value %}
+                                    {% if description %}
+                                        <li>{{ description }}</li>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>

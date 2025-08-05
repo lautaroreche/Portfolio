@@ -7,7 +7,7 @@ def get_project_images(projects):
     images_json = {}
     for project in projects:
         image_urls = [project.image.url]
-        for image_field in ['image2', 'image3']:
+        for image_field in ['image2']:
             image = getattr(project, image_field)
             if image:
                 image_urls.append(image.url)
@@ -35,12 +35,3 @@ def home(request):
     }
     
     return render(request, 'index.html', context)
-
-
-def web(requests):
-    projects = Project.objects.filter(type__in=['frontend', 'web-portfolio'])
-    context = {
-        "projects": projects,
-        "images_json": get_project_images(projects),
-    }
-    return render(requests, 'web.html', context)

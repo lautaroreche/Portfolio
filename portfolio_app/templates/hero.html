@@ -1,0 +1,16 @@
+<section id="home" class="relative flex flex-col items-center justify-center gap-4 md:gap-8 px-12 md:px-40 h-screen bg-blue-100">
+    <h1 class="text-4xl md:text-7xl text-center font-semibold">I'm Lautaro Reche</h1>
+    <p class="text-xl md:text-2xl text-center max-w-2xl font-semibold"><span class="text-blue-500">Software Developer</span> with background in web development, automation, scripting and AI model optimization.</p>
+    <ul class="flex gap-4">
+        {% for rrss in social_media %}
+            <li>
+                <a href="{{ rrss.hyperlink }}" target="_blank" rel="noreferrer noopener">
+                    <i class="fa-brands fa-{{ rrss.name|lower }} text-4xl text-black p-6 border border-gray-300 shadow-md bg-white hover:bg-blue-200 transition-colors rounded-lg animate-on-scroll"></i>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+    <div class="hidden md:block">
+        <i class="fa-solid fa-chevron-down text-2xl absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"></i>
+    </div>
+</section>

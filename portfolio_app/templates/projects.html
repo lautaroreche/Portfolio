@@ -1,50 +1,25 @@
-{% load custom_filters %}
-
-
-<main id="projects"> 
-    <h2 class="animate-on-scroll">PROJECTS</h2>
-    <div class="cards-container flex-center gap50">
+<main id="projects" class="flex flex-col items-center gap-12 p-12">
+    <h2 class="text-3xl md:text-4xl text-center font-semibold">Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-14 max-w-[1000px]">
         {% for project in projects %}
-            <div class="project-card flex-col gap10" data-images='{{ images_json|dict_key:project.id|safe }}'>
-                <div class="project-card-img-container">
-                    <p class="project-card-type">
-                        {% if project.type == 'backend' %}
-                            Backend
-                        {% else %}
-                            Frontend
+            <div class="space-y-2 max-w-[500px] mx-auto">
+                <div class="relative group w-full h-auto">
+                    <img src="{{ project.image.url }}" alt="Project {{ project.title }} image" class="w-full h-auto object-cover">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center gap-8 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        {% if project.public_url %}
+                            <a href="{{ project.public_url }}" target="_blank" rel="noopener noreferrer" class="px-5 py-4 w-44 text-center bg-white hover:bg-blue-200 transition-colors border border-gray-300 shadow-md rounded-full">
+                                View Project
+                            </a>
                         {% endif %}
-                    </p>
-                    {% if project.image2 or project.image3 %}
-                        <button class="carousel-arrow left" onclick="cambiarImagen(this, -1)">
-                            <i class="fa-solid fa-chevron-left"></i>
-                        </button>
-                        <button class="carousel-arrow right" onclick="cambiarImagen(this, 1)">
-                            <i class="fa-solid fa-chevron-right"></i>
-                        </button>
-                    {% endif %}
-                    <img class="carousel-img" src="{{ project.image.url }}" alt="Picture of project {{ project.title }}" title="Project {{ project.title }}">
-                    <div class="tags-container">
-                        {% for tag in project.get_tags %}
-                            <span class="tag">{{ tag }}</span>
-                        {% endfor %}
+                        <a href="{{ project.repo_url }}" target="_blank" rel="noopener noreferrer"
+                        class="px-5 py-4 w-44 text-center bg-white hover:bg-blue-200 transition-colors border border-gray-300 shadow-md rounded-full">
+                            View Repository
+                        </a>
                     </div>
-                    <!--
-                    <div class="project-info flex-col gap20">
-                        <h3 class="project-title">{{ project.title }}</h3>
-                        <p class="project-summary">{{ project.summary }}</p>
-                    </div>
-                    -->
                 </div>
-                {% if project.public_url %}
-                    <a href="{{ project.public_url }}" alt="{{ project.title }}" target="_blank" rel="noreferrer" class="button-project button-project-main flex-center">
-                        View live project
-                    </a>
-                {% else %}
-                    <p class="button-project button-project-dark flex-center">Preview not available</p>
-                {% endif %}
-                <a href="{{ project.repo_url }}" alt="{{ project.title }}" target="_blank" rel="noreferrer" class="button-project button-project-dark flex-center">
-                    View GitHub repository
-                </a>
+                <p class="text-gray-700">{{ project.type|upper }}</p>
+                <h3 class="text-2xl">{{ project.title|upper }}</h3>
+                <p class="text-gray-700">{{ project.tags|upper }}</p>
             </div>
         {% endfor %}
     </div>
