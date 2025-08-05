@@ -1,67 +1,39 @@
-{% extends "base.html" %}
 {% load static %}
 
 
-{% block content %}
-    <section id="home" class="flex gap20 home-section">
-        <h1 class="animate-on-scroll">HI, I'M LAUTARO RECHE</h1>
-        <p class="summary">Software Developer with background in web development, automation, data analysis and AI model optimization in agile environments</p>
-        <div class="detail-list">
-            <ul class="flex-row gap20">
-                {% for rrss in social_media %}
-                    <li>
-                        <a href="{{ rrss.hyperlink }}" target="_blank" rel="noreferrer" class="flex-center gap10">
-                            <img src="{{ rrss.image.url }}" alt="{{ rrss.name }}" class="small-logo" title="{{ rrss.name }}">
-                            {{ rrss.name }}
-                        </a>
-                    </li>
-                {% endfor %}
-            </ul>
-        </div>
-    </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Portfolio web de Lautaro Reche">
+    <meta name="keywords" content="portfolio, web developer, web design, programming, font-end development, HTML, CSS, web projects, UI/UX design, web applications, software development, freelance programming, tech solutions, developer portfolio, programming projects, personal portfolio">
+    <meta name="author" content="Lautaro Reche">
+    <meta name="robots" content="index, follow">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <title>Lautaro Reche | Software Developer</title>
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mozilla+Text:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4" defer></script>
+</head>
+<body>
+    {% include 'header.html' %}
+    
+    {% include 'hero.html' %}
     
     {% include "projects.html" %}
+    
+    {% include "technologies.html" %}
+    
+    {% include "experience.html" %}
 
-    <section id="technologies">
-        <h2 class="animate-on-scroll">TECHNOLOGIES</h2>
-        <div class="detail-list flex-center">
-            <ul class="flex-center gap20">
-                {% for technology in technologies %}
-                    <li class="flex-center gap10">
-                        <img src="{{ technology.image.url }}" alt="{{ technology.name }}" class="small-logo" title="{{ technology.name }}">
-                        {{ technology.name }}
-                    </li>
-                {% endfor %}
-            </ul>
-        </div>
-    </section>
-    <section id="experience">
-        <h2 class="animate-on-scroll">EXPERIENCE</h2>
-        <div class="cards-container flex-col gap50">
-            {% for work_experience in work_experiences %}
-                <div class="work-experience-card flex-row gap20">
-                    <img src="{{ work_experience.image.url }}" alt="{{ work_experience.name }} logo" title="{{ work_experience.name }}" class="logo">
-                    <div class="flex-col gap20">
-                        <div class="flex-col gap5">
-                            <p class="position-name">{{ work_experience.title }}</p>
-                            <p class="company-name">{{ work_experience.company }}</p>
-                            <p class="company-location">{{ work_experience.location }}</p>
-                            <p class="company-dates">{{ work_experience.start_date }} - {{ work_experience.end_date }}</p>
-                        </div>
-                        <ul class="flex-col gap5">
-                            {% for key, value in work_experience_description_dict %}
-                                {% if key == work_experience.id %}
-                                    {% for description in value %}
-                                        {% if description %}
-                                            <li>{{ description }}</li>
-                                        {% endif %}
-                                    {% endfor %}
-                                {% endif %}
-                            {% endfor %}
-                        </ul>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-    </section>
-{% endblock %}
+    {% include 'footer.html' %}
+    
+    {% include 'scripts.html' %}
+</body>
+</html>

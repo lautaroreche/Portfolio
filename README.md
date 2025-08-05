@@ -1,7 +1,7 @@
 # Personal Portfolio 🌐  
 
 ## Description ℹ️
-This repository contains the code for a **my personal portfolio, which is a web page built with Python, Django, PostgreSQL, HTML and CSS**.
+This repository contains the code for a **my personal portfolio, which is a web page built with Python, Django, PostgreSQL, HTML and Tailwind CSS**.
 
 ## Features ✨  
 - Clean and modern design.  

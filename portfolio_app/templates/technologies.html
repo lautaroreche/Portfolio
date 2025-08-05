@@ -1,0 +1,16 @@
+{% load static %}
+
+
+<section id="technologies" class="flex flex-col items-center gap-12 p-12 bg-blue-100">
+    <h2 class="text-3xl md:text-4xl text-center font-semibold">Technologies</h2>
+    <div class="max-w-[800px]">
+        <ul class="flex justify-center items-center gap-3 md:gap-6 flex-wrap">
+            {% for technology in technologies %}
+                <li class="flex items-center gap-2 px-4 py-2 bg-white border border-gray-300 rounded-full shadow-md animate-on-scroll">
+                    <img src="{{ technology.image.url }}" alt="{{ technology.name }}" class="size-8" title="{{ technology.name }}">
+                    <p class="md:text-lg">{{ technology.name }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
