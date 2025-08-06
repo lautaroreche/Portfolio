@@ -1,6 +1,13 @@
-<section id="home" class="relative flex flex-col items-center justify-center gap-4 md:gap-8 px-12 pt-18 md:px-40 h-screen bg-blue-100">
+{% load static %}
+
+
+<section id="home" class="relative flex flex-col items-center justify-center gap-4 md:gap-8 px-12 md:px-40 pt-18 h-screen overflow-hidden text-white">
+    <div class="absolute inset-0 -z-10">
+        <img src="{% static 'images/hero-background.webp' %}" alt="Background" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-black/80"></div>
+    </div>
     <h1 class="text-4xl md:text-7xl text-center font-semibold">I'm Lautaro Reche</h1>
-    <p class="text-xl md:text-2xl text-center max-w-2xl font-semibold"><span class="text-blue-500">Software Developer</span> with background in web development, automation, scripting and AI model optimization. Looking to keep growing in tech!</p>
+    <p class="text-xl md:text-2xl text-center max-w-2xl font-semibold"><span class="text-blue-300">Software Developer</span> with background in web development, automation, scripting and AI model optimization. Looking to keep growing in tech!</p>
     <ul class="flex gap-4">
         {% for rrss in social_media %}
             <li>
@@ -10,7 +17,7 @@
             </li>
         {% endfor %}
     </ul>
-    <a href="#projects" onclick="toggleCheckbox()" class="hidden md:block">
+    <a href="#" onclick="scrollToSection('projects'); return false;" class="hidden md:block">
         <i class="fa-solid fa-chevron-down text-2xl absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"></i>
     </a>
 </section>

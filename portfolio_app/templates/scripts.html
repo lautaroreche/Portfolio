@@ -54,3 +54,13 @@
         }, 200);
     });
 </script>
+
+<script>
+    function scrollToSection(id) {
+        const target = document.getElementById(id);
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+            history.replaceState(null, '', location.pathname);
+        }
+    }
+</script>

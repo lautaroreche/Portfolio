@@ -3,21 +3,21 @@
         <button id="menu-toggle" class="md:hidden text-4xl z-40" aria-label="Menu icon">
             <i class="fas fa-bars cursor-pointer px-4 py-3 border border-gray-300 shadow-md bg-white hover:bg-blue-200 transition-colors rounded-full animate-on-scroll"></i>
         </button>
-        <ul id="mobile-menu" class="fixed md:static inset-0 md:inset-auto -translate-y-full md:translate-y-0 bg-white flex flex-col md:flex-row justify-center items-center gap-10 md:gap-1 p-5 text-2xl md:text-lg font-semibold text-black border border-gray-300 shadow-md md:rounded-full transition-transform duration-500 z-30">
+        <ul id="mobile-menu" class="fixed md:static inset-0 md:inset-auto -translate-y-full md:translate-y-0 bg-white flex flex-col md:flex-row justify-center items-center gap-10 md:gap-1 px-3 py-5 text-2xl md:text-lg font-semibold text-black border border-gray-300 shadow-md md:rounded-full transition-transform duration-500 z-30">
             <li>
-                <a href="#home" onclick="toggleCheckbox()" class="px-5 py-3 rounded-full hover:bg-blue-200 hover:shadow-md transition-colors">Lautaro Reche</a>
+                <a href="#" onclick="scrollToSection('home'); return false;" class="px-4 py-2 rounded-full hover:bg-blue-200 hover:shadow-md transition-colors">Lautaro Reche</a>
             </li>
             <li>
-                <a href="#projects" onclick="toggleCheckbox()" class="px-5 py-3 rounded-full hover:bg-blue-200 hover:shadow-md transition-colors">Projects</a>
+                <a href="#" onclick="scrollToSection('projects'); return false;" class="px-4 py-2 rounded-full hover:bg-blue-200 hover:shadow-md transition-colors">Projects</a>
             </li>
             <li>
-                <a href="#technologies" onclick="toggleCheckbox()" class="px-5 py-3 rounded-full hover:bg-blue-200 hover:shadow-md transition-colors">Technologies</a>
+                <a href="#" onclick="scrollToSection('technologies'); return false;" class="px-4 py-2 rounded-full hover:bg-blue-200 hover:shadow-md transition-colors">Technologies</a>
             </li>
             <li>
-                <a href="#experience" onclick="toggleCheckbox()" class="px-5 py-3 rounded-full hover:bg-blue-200 hover:shadow-md transition-colors">Experience</a>
+                <a href="#" onclick="scrollToSection('experience'); return false;" class="px-4 py-2 rounded-full hover:bg-blue-200 hover:shadow-md transition-colors">Experience</a>
             </li>
             <li>
-                <a href="#contact" onclick="toggleCheckbox()" class="px-5 py-3 rounded-full hover:bg-blue-200 hover:shadow-md transition-colors">Contact</a>
+                <a href="#" onclick="scrollToSection('contact'); return false;" class="px-4 py-2 rounded-full hover:bg-blue-200 hover:shadow-md transition-colors">Contact</a>
             </li>
         </ul>
     </nav>
