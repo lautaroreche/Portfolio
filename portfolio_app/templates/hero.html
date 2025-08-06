@@ -1,18 +1,18 @@
 {% load static %}
 
 
-<section id="home" class="relative flex flex-col items-center justify-center gap-4 md:gap-8 px-12 md:px-40 pt-18 h-screen overflow-hidden text-white">
+<section id="home" class="relative flex flex-col items-center justify-center gap-4 md:gap-8 px-12 md:px-40 md:pt-18 overflow-hidden text-white" style="height: calc(var(--vh, 1vh) * 100)">
     <div class="absolute inset-0 -z-10">
         <img src="{% static 'images/hero-background.webp' %}" alt="Background" class="w-full h-full object-cover" />
         <div class="absolute inset-0 bg-black/80"></div>
     </div>
-    <h1 class="text-4xl md:text-7xl text-center font-semibold">I'm Lautaro Reche</h1>
-    <p class="text-xl md:text-2xl text-center max-w-2xl font-semibold"><span class="text-blue-300">Software Developer</span> with background in web development, automation, scripting and AI model optimization. Looking to keep growing in tech!</p>
+    <h1 class="text-4xl sm:text-5xl md:text-7xl text-center font-semibold">I'm Lautaro Reche</h1>
+    <p class="text-xl md:text-2xl text-center max-w-md md:max-w-2xl font-semibold"><span class="text-blue-300">Software Developer</span> with background in web development, automation, scripting and AI model optimization. <span class="hidden md:block">Looking to keep growing in tech!</span></p>
     <ul class="flex gap-4">
         {% for rrss in social_media %}
             <li>
                 <a href="{{ rrss.hyperlink }}" target="_blank" rel="noreferrer noopener">
-                    <i class="fa-brands fa-{{ rrss.name|lower }} text-4xl text-black p-6 border border-gray-300 shadow-md bg-white hover:bg-blue-200 transition-colors rounded-lg animate-on-scroll"></i>
+                    <i class="fa-brands fa-{{ rrss.name|lower }} text-4xl text-black p-4 md:p-6 border border-gray-300 shadow-md bg-white hover:bg-blue-200 transition-colors rounded-lg animate-on-scroll"></i>
                 </a>
             </li>
         {% endfor %}
