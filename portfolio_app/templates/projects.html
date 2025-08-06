@@ -4,7 +4,7 @@
         {% for project in projects %}
             <div class="space-y-3 max-w-[500px] mx-auto">
                 <div class="relative group w-full h-auto">
-                    <img src="{{ project.image.url }}" alt="Project {{ project.title }} image" class="w-full h-auto object-cover border border-gray-300 shadow-md">
+                    <img src="{{ project.image.url }}" alt="Project {{ project.title }} image" class="w-full h-auto object-cover">
                     <p class="absolute top-0 left-0 px-5 py-2 bg-blue-200 text-lg border border-gray-300 shadow-md rounded-br-3xl z-20">{{ project.type|title }}</p>
                     <div class="absolute inset-0 flex flex-col items-center justify-center gap-6 md:gap-8 bg-black/70 border border-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         {% if project.public_url %}
