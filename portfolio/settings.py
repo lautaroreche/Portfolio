@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Inicializar django-environ
 env = environ.Env()
-environ.Env.read_env(os.path.join(BASE_DIR, "../.env"))
+environ.Env.read_env(os.path.join(BASE_DIR, ".env"))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -53,16 +53,16 @@ INSTALLED_APPS = [
 
 # Configuración de Cloudinary
 cloudinary.config(
-   cloud_name = env("CLOUD_NAME"),
-   api_key = env("API_KEY"),
-   api_secret = env("API_SECRET")
+    cloud_name = env("CLOUD_NAME"),
+    api_key = env("API_KEY"),
+    api_secret = env("API_SECRET")
 )
 
 # Configuración de Cloudinary
 CLOUDINARY_STORAGE = {
-   'CLOUD_NAME': os.getenv('CLOUD_NAME'),
-   'API_KEY': os.getenv('API_KEY'),
-   'API_SECRET': os.getenv('API_SECRET')
+    'CLOUD_NAME': os.getenv('CLOUD_NAME'),
+    'API_KEY': os.getenv('API_KEY'),
+    'API_SECRET': os.getenv('API_SECRET')
 }
 # Almacenamiento de archivos multimedia
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
