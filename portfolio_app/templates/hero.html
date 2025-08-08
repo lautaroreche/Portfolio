@@ -1,9 +1,13 @@
-{% load static %}
-
-
 <section id="home" class="relative flex flex-col items-center justify-center gap-4 md:gap-8 px-12 md:px-40 md:pt-18 overflow-hidden text-white" style="height: calc(var(--vh, 1vh) * 100)">
     <div class="absolute inset-0 -z-10">
-        <img src="{% static 'images/hero-background.webp' %}" alt="Background" class="w-full h-full object-cover" />
+        <img src="https://res.cloudinary.com/dbmamjgiv/image/upload/v1754690975/hero-background_vrxzab.webp?f=auto&q=auto&w=1410" alt="Background image" class="w-full h-full object-cover" fetchpriority="high"
+        srcset="
+            https://res.cloudinary.com/dbmamjgiv/image/upload/v1754690975/hero-background_vrxzab.webp?f=auto&q=auto&w=768   768w,
+            https://res.cloudinary.com/dbmamjgiv/image/upload/v1754690975/hero-background_vrxzab.webp?f=auto&q=auto&w=1024  1024w,
+            https://res.cloudinary.com/dbmamjgiv/image/upload/v1754690975/hero-background_vrxzab.webp?f=auto&q=auto&w=1410  1410w,
+            https://res.cloudinary.com/dbmamjgiv/image/upload/v1754690975/hero-background_vrxzab.webp?f=auto&q=auto&w=2000  2000w,
+            https://res.cloudinary.com/dbmamjgiv/image/upload/v1754690975/hero-background_vrxzab.webp?f=auto&q=auto&w=2820  2820w"
+        />
         <div class="absolute inset-0 bg-black/80"></div>
     </div>
     <h1 class="text-4xl sm:text-5xl md:text-7xl text-center font-semibold">I'm Lautaro Reche</h1>
@@ -11,7 +15,7 @@
     <ul class="flex gap-4">
         {% for rrss in social_media %}
             <li>
-                <a href="{{ rrss.hyperlink }}" target="_blank" rel="noreferrer noopener">
+                <a href="{{ rrss.hyperlink }}" target="_blank" rel="noreferrer noopener" aria-label="{{ rrss.name }} button">
                     <i class="fa-brands fa-{{ rrss.name|lower }} text-4xl text-black p-4 md:p-6 border border-gray-300 shadow-md bg-white hover:bg-blue-200 transition-colors rounded-lg animate-on-scroll"></i>
                 </a>
             </li>
