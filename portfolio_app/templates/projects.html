@@ -8,12 +8,12 @@
                     <p class="absolute top-0 left-0 px-5 py-2 bg-blue-200 text-lg border border-gray-300 shadow-md rounded-br-3xl z-20">{{ project.type|title }}</p>
                     <div class="absolute inset-0 flex flex-col items-center justify-center gap-6 md:gap-8 bg-black/70 border border-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         {% if project.public_url %}
-                            <a href="{{ project.public_url }}" target="_blank" rel="noopener noreferrer" class="px-5 py-4 w-44 text-center bg-white hover:bg-blue-200 transition-colors border border-gray-300 shadow-md rounded-full">
+                            <a href="{{ project.public_url }}" target="_blank" rel="noopener noreferrer" class="px-5 py-4 w-44 text-center bg-white hover:bg-blue-100 transition-colors border border-gray-300 shadow-md rounded-full">
                                 View Project
                             </a>
                         {% endif %}
                         <a href="{{ project.repo_url }}" target="_blank" rel="noopener noreferrer"
-                        class="px-5 py-4 w-44 text-center bg-white hover:bg-blue-200 transition-colors border border-gray-300 shadow-md rounded-full">
+                        class="px-5 py-4 w-44 text-center bg-white hover:bg-blue-100 transition-colors border border-gray-300 shadow-md rounded-full">
                             View Repository
                         </a>
                     </div>

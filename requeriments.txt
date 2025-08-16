@@ -8,12 +8,16 @@ dj-database-url==3.0.1
 Django==5.1.6
 django-cloudinary-storage==0.3.0
 django-environ==0.12.0
+et_xmlfile==2.0.0
 filelock==3.16.1
 gunicorn==23.0.0
 idna==3.10
 mysql-connector-python==9.2.0
+numpy==2.3.2
 oauthlib==3.2.2
+openpyxl==3.1.5
 packaging==24.2
+pandas==2.3.1
 pillow==11.1.0
 platformdirs==4.3.6
 psycopg2-binary==2.9.10

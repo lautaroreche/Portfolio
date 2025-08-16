@@ -1,9 +1,12 @@
 {
   "dependencies": {
     "@tailwindcss/cli": "^4.1.11",
+    "concurrently": "^9.2.0",
     "tailwindcss": "^4.1.11"
   },
   "scripts": {
     "build:css": "npx tailwindcss -i ./portfolio_app/static/css/input.css -o ./portfolio_app/static/css/output.css --minify",
-    "watch:css": "npx tailwindcss -i ./portfolio_app/static/css/input.css -o ./portfolio_app/static/css/output.css --watch" }
+    "watch:css": "npx tailwindcss -i ./portfolio_app/static/css/input.css -o ./portfolio_app/static/css/output.css --watch",
+    "dev": "concurrently \"npm run watch:css\" \"python3 manage.py runserver 8115\""
+  }
 }

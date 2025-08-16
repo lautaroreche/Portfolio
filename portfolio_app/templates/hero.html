@@ -16,7 +16,18 @@
         {% for rrss in social_media %}
             <li>
                 <a href="{{ rrss.hyperlink }}" target="_blank" rel="noreferrer noopener" aria-label="{{ rrss.name }} button">
-                    <i class="fa-brands fa-{{ rrss.name|lower }} text-4xl text-black p-4 md:p-6 border border-gray-300 shadow-md bg-white hover:bg-blue-200 transition-colors rounded-lg animate-on-scroll"></i>
+                    <i class="fa-brands fa-{{ rrss.name|lower }} text-4xl
+                    
+                    {% if rrss.name == "LinkedIn" %}
+                        text-blue-400
+                    {% else %}
+                        text-black
+                    {% endif %}
+
+                    
+                    
+                    
+                    p-4 md:p-6 border border-gray-300 shadow-md bg-white hover:bg-blue-50 transition-colors rounded-lg animate-on-scroll"></i>
                 </a>
             </li>
         {% endfor %}
