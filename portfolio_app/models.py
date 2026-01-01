@@ -7,6 +7,7 @@ class Project(models.Model):
         ('frontend', 'Frontend'),
         ('backend', 'Backend'),
         ('fullstack', 'Full Stack'),
+        ('data', 'Data Analytics'),
     ]
 
     id = models.AutoField(primary_key=True)
