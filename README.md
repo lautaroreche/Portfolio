@@ -16,7 +16,7 @@ To view and edit the project, you only need:
 ## Installation & Usage 🚀  
 1. Clone this repository or download the files manually:  
    ```bash
-   git clone https://github.com/lautaroreche/Formaggi-Web-Page
+   git clone https://github.com/lautaroreche/Portfolio
 2. Open the `index.html` file in your web browser.
 
 ## Customization 🎨
