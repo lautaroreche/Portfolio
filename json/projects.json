@@ -1,7 +1,7 @@
 [
     {
         "title": "Legari Web Page",
-        "tags": "Python, Django, HTML, CSS",
+        "tags": "Python, Django, PostgreSQL, HTML, CSS",
         "type": "Full Stack",
         "image": "https://res.cloudinary.com/dbmamjgiv/image/upload/v1767303033/rbpyusrmvasvcu5equov.webp",
         "public_url": "https://www.fabianlegari.art/",
