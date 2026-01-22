@@ -53,7 +53,7 @@
 
     <section id="technologies" class="flex flex-col items-center gap-12 p-12 bg-blue-200">
         <h2 class="text-3xl md:text-4xl text-center font-semibold">Technologies</h2>
-        <div id="technologies-container" class="max-w-[800px] cursor-pointer">
+        <div id="technologies-container" class="max-w-[800px]">
             <ul class="flex justify-center items-center gap-3 md:gap-4 flex-wrap">
                 
             </ul>
@@ -131,35 +131,24 @@
             projects.forEach(project => {
                 const html = `
                     <div class="space-y-3 max-w-[500px] mx-auto">
-                        <div class="relative group w-full h-auto">
-                            ${project.public_url ? `
-                            <a href="${project.public_url}" target="_blank" rel="noopener noreferrer"
-                                class="absolute inset-0 z-10 md:hidden">
-                            </a>
-                            ` : ''}
-                            <img src="${project.image}" alt="Project ${project.title} image"
-                                class="w-full h-auto object-cover">
-                            <p class="absolute top-0 left-0 px-5 py-2 bg-blue-100 text-lg border border-blue-200 shadow-md rounded-br-3xl z-20">
-                            ${project.type}
+                        <div class="relative group w-full h-auto shadow-sm">
+                            ${project.public_url ? 
+                                `<a href="${project.public_url}" target="_blank" rel="noopener noreferrer">
+                                    <img src="${project.image}" alt="Project ${project.title} image" class="w-full h-auto object-cover">
+                                </a>` : 
+                                `<img src="${project.image}" alt="Project ${project.title} image" class="w-full h-auto object-cover">`
+                            }
+                            <p class="absolute top-0 left-0 px-5 py-2 text-lg font-semibold border bg-blue-50 border-transparent rounded-br-3xl z-20">
+                                ${project.type}
                             </p>
-                            <div class="absolute inset-0 hidden md:flex flex-col items-center justify-center gap-6 md:gap-8
-                                        bg-black/70 border border-gray-300 opacity-0 group-hover:opacity-100
-                                        transition-opacity duration-300 z-20">
                             ${project.public_url ? `
-                                <a href="${project.public_url}" target="_blank" rel="noopener noreferrer"
-                                class="px-5 py-4 w-44 text-center bg-white hover:bg-blue-200 hover:border-blue-300 transition-colors
-                                        border shadow-md rounded-full">
-                                View Project
-                                </a>
+                            <a href="${project.public_url}" target="_blank" rel="noopener noreferrer" class="absolute bottom-0 left-0 px-5 py-2 bg-blue-50 border border-transparent text-lg font-semibold hover:bg-blue-200 hover:border-blue-300 rounded-tr-3xl z-20">View project</a>
                             ` : ''}
-                            <a href="${project.repo_url}" target="_blank" rel="noopener noreferrer"
-                                class="px-5 py-4 w-44 text-center bg-white hover:bg-blue-200 hover:border-blue-300 transition-colors
-                                        border shadow-md rounded-full">
-                                View Repository
+                            <a href="${project.repo_url}" target="_blank" rel="noopener noreferrer" class="absolute bottom-0 right-0 px-5 py-2 bg-blue-50 border border-transparent hover:bg-blue-200 hover:border-blue-300 text-lg rounded-tl-3xl z-20 flex items-center justify-center"> 
+                            <i class="fa-brands fa-github text-2xl"></i>
                             </a>
-                            </div>
                         </div>
-                        <div class="space-y-1">
+                        <div>
                             ${project.public_url ? `
                             <a href="${project.public_url}" target="_blank" rel="noopener noreferrer"
                                 class="inline-block">
@@ -176,7 +165,7 @@
                             ${project.tags}
                             </p>
                         </div>
-                        </div>
+                    </div>
                     `;
 
             container.innerHTML += html;
@@ -194,7 +183,7 @@
 
             technologies.forEach(tech => {
             const html = `
-                <li class="flex items-center gap-2 px-4 py-2 bg-white border border-blue-200 rounded-full shadow-md hover:bg-blue-50 hover:border-blue-300">
+                <li class="flex items-center gap-2 px-4 py-2 bg-white border border-blue-200 rounded-full shadow-md hover:border-blue-300">
                     <img src="${tech.image}" alt="${tech.name}" class="h-8 w-8" title="${tech.name} technology logo">
                     <p class="md:text-lg">${tech.name}</p>
                 </li>
