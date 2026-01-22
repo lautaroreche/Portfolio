@@ -20,26 +20,26 @@
     <header>
         <nav class="fixed top-0 right-0 flex md:justify-center p-4 w-full h-auto z-50">
             <button id="menu-toggle" class="md:hidden text-4xl z-40" aria-label="Menu icon">
-                <i class="fas fa-bars cursor-pointer px-4 py-3 border border-gray-300 shadow-md bg-white hover:bg-blue-200 transition-colors rounded-full"></i>
+                <i class="fas fa-bars cursor-pointer px-4 py-3 border border-gray-300 shadow-md bg-white hover:bg-blue-200 hover:border-blue-300 transition-colors rounded-full"></i>
             </button>
             <ul id="mobile-menu" class="fixed md:static inset-0 md:inset-auto -translate-y-full md:translate-y-0 bg-white flex flex-col md:flex-row justify-center items-center gap-10 md:gap-1 px-3 py-5 text-2xl md:text-lg font-semibold text-black border border-gray-300 shadow-md md:rounded-full transition-transform duration-500 z-30">
-                <li><a href="#home" class="px-4 py-2 rounded-full hover:bg-blue-200 hover:shadow-sm transition-colors ease-in-out">Home</a></li>
-                <li><a href="#projects" class="px-4 py-2 rounded-full hover:bg-blue-200 hover:shadow-sm transition-colors ease-in-out">Projects</a></li>
-                <li><a href="#technologies" class="px-4 py-2 rounded-full hover:bg-blue-200 hover:shadow-sm transition-colors ease-in-out">Technologies</a></li>
-                <li><a href="#experience" class="px-4 py-2 rounded-full hover:bg-blue-200 hover:shadow-sm transition-colors ease-in-out">Experience</a></li>
-                <li><a href="#contact" class="px-4 py-2 rounded-full hover:bg-blue-200 hover:shadow-sm transition-colors ease-in-out">Contact</a></li>
+                <li><a href="#home" class="px-4 py-2 rounded-full border border-white hover:bg-blue-200 hover:border-blue-300 hover:shadow-sm transition-colors">Home</a></li>
+                <li><a href="#projects" class="px-4 py-2 rounded-full border border-white hover:bg-blue-200 hover:border-blue-300 hover:shadow-sm transition-colors">Projects</a></li>
+                <li><a href="#technologies" class="px-4 py-2 rounded-full border border-white hover:bg-blue-200 hover:border-blue-300 hover:shadow-sm transition-colors">Technologies</a></li>
+                <li><a href="#experience" class="px-4 py-2 rounded-full border border-white hover:bg-blue-200 hover:border-blue-300 hover:shadow-sm transition-colors">Experience</a></li>
+                <li><a href="#contact" class="px-4 py-2 rounded-full border border-white hover:bg-blue-200 hover:border-blue-300 hover:shadow-sm transition-colors">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="home" class="relative flex flex-col items-center justify-center gap-4 md:gap-8 px-12 md:px-40 pt-20 text-white" style="height: calc(var(--vh, 1vh) * 100);">
         <div class="absolute inset-0 -z-10">
-            <img src="https://res.cloudinary.com/dbmamjgiv/image/upload/v1767770004/data-background_lnbikc.jpg" alt="Background image" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black/80"></div>
+            <img src="https://res.cloudinary.com/dbmamjgiv/image/upload/v1769080573/pexels-markus-winkler-1430818-19891030_z2wmgm.jpg" alt="Background image" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/85"></div>
         </div>
-        <h1 class="text-4xl sm:text-5xl md:text-7xl text-center font-semibold text-blue-400">I'm Lautaro Reche</h1>
-        <p class="text-xl md:text-2xl text-center max-w-md md:max-w-2xl font-semibold"><span class="text-blue-400">Data Analyst</span> and Business Intelligence professional.</p>
-        <a href="#projects" class="absolute bottom-8 left-1/2 -translate-x-1/2 text-2xl animate-bounce transition-transform duration-500 ease-in-out">
+        <h1 class="text-4xl sm:text-5xl md:text-7xl text-center font-semibold">I'm <span class="text-blue-400">Lautaro Reche</span></h1>
+        <p class="text-xl md:text-2xl text-center max-w-md md:max-w-2xl font-semibold">Data Analyst and Business Intelligence professional.</p>
+        <a href="#projects" class="absolute bottom-8 left-1/2 -translate-x-1/2 text-2xl animate-bounce transition-transform duration-500">
             <i class="fa-solid fa-chevron-down"></i>
         </a>
     </section>
@@ -53,8 +53,9 @@
 
     <section id="technologies" class="flex flex-col items-center gap-12 p-12 bg-blue-200">
         <h2 class="text-3xl md:text-4xl text-center font-semibold">Technologies</h2>
-        <div id="technologies-container" class="max-w-[800px]">
+        <div id="technologies-container" class="max-w-[800px] cursor-pointer">
             <ul class="flex justify-center items-center gap-3 md:gap-4 flex-wrap">
+                
             </ul>
         </div>
     </section>
@@ -71,12 +72,12 @@
             <ul class="flex justify-center gap-4">
                 <li>
                     <a href="mailto:lautaroreche1@gmail.com" aria-label="Mail button">
-                        <i class="fa-solid fa-envelope text-4xl text-red-500 p-4 md:p-6 border border-gray-300 shadow-md bg-white hover:bg-blue-50 transition-colors rounded-lg"></i>
+                        <i class="fa-solid fa-envelope text-4xl text-red-500 p-4 md:p-6 border border-blue-200 shadow-md bg-white hover:bg-blue-50 hover:border-blue-300 transition-colors rounded-lg"></i>
                     </a>
                 </li>
                 <li>
                     <a href="https://www.linkedin.com/in/lautaroreche/" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn button">
-                        <i class="fa-brands fa-linkedin text-4xl text-blue-500 p-4 md:p-6 border border-gray-300 shadow-md bg-white hover:bg-blue-50 transition-colors rounded-lg"></i>
+                        <i class="fa-brands fa-linkedin text-4xl text-blue-500 p-4 md:p-6 border border-blue-200 shadow-md bg-white hover:bg-blue-50 hover:border-blue-300 transition-colors rounded-lg"></i>
                     </a>
                 </li>
             </ul>
@@ -138,7 +139,7 @@
                             ` : ''}
                             <img src="${project.image}" alt="Project ${project.title} image"
                                 class="w-full h-auto object-cover">
-                            <p class="absolute top-0 left-0 px-5 py-2 bg-blue-200 text-lg border border-gray-300 shadow-md rounded-br-3xl z-20">
+                            <p class="absolute top-0 left-0 px-5 py-2 bg-blue-100 text-lg border border-blue-200 shadow-md rounded-br-3xl z-20">
                             ${project.type}
                             </p>
                             <div class="absolute inset-0 hidden md:flex flex-col items-center justify-center gap-6 md:gap-8
@@ -146,14 +147,14 @@
                                         transition-opacity duration-300 z-20">
                             ${project.public_url ? `
                                 <a href="${project.public_url}" target="_blank" rel="noopener noreferrer"
-                                class="px-5 py-4 w-44 text-center bg-white hover:bg-blue-200 transition-colors
-                                        border border-gray-300 shadow-md rounded-full">
+                                class="px-5 py-4 w-44 text-center bg-white hover:bg-blue-200 hover:border-blue-300 transition-colors
+                                        border shadow-md rounded-full">
                                 View Project
                                 </a>
                             ` : ''}
                             <a href="${project.repo_url}" target="_blank" rel="noopener noreferrer"
-                                class="px-5 py-4 w-44 text-center bg-white hover:bg-blue-200 transition-colors
-                                        border border-gray-300 shadow-md rounded-full">
+                                class="px-5 py-4 w-44 text-center bg-white hover:bg-blue-200 hover:border-blue-300 transition-colors
+                                        border shadow-md rounded-full">
                                 View Repository
                             </a>
                             </div>
@@ -172,7 +173,7 @@
                             </h3>
                             `}
                             <p class="md:text-lg text-gray-700">
-                            ${project.tags.toUpperCase()}
+                            ${project.tags}
                             </p>
                         </div>
                         </div>
@@ -193,7 +194,7 @@
 
             technologies.forEach(tech => {
             const html = `
-                <li class="flex items-center gap-2 px-4 py-2 bg-white border border-gray-300 rounded-full shadow-md hover:bg-blue-50">
+                <li class="flex items-center gap-2 px-4 py-2 bg-white border border-blue-200 rounded-full shadow-md hover:bg-blue-50 hover:border-blue-300">
                     <img src="${tech.image}" alt="${tech.name}" class="h-8 w-8" title="${tech.name} technology logo">
                     <p class="md:text-lg">${tech.name}</p>
                 </li>
