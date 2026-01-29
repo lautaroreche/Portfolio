@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth overscroll-y-none">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
-<body class="text-black overflow-x-hidden">
+<body class="m-0 p-0 box-border text-black overflow-x-hidden">
     <header>
         <nav class="fixed top-0 right-0 flex md:justify-center p-4 w-full h-auto z-50">
             <button id="menu-toggle" class="md:hidden text-4xl z-40" aria-label="Menu icon">
@@ -32,13 +32,13 @@
         </nav>
     </header>
 
-    <section id="home" class="relative flex flex-col items-center justify-center gap-4 md:gap-8 px-12 md:px-40 pt-20 text-white" style="height: calc(var(--vh, 1vh) * 100);">
+    <section id="home" class="relative flex flex-col items-center justify-center gap-4 md:gap-8 px-14 md:px-28 pt-20 text-white" style="height: calc(var(--vh, 1vh) * 100);">
         <div class="absolute inset-0 -z-10">
             <img src="https://res.cloudinary.com/dbmamjgiv/image/upload/v1769091111/pexels-markus-winkler-1430818-19891030_1_p2ueng.jpg" alt="Background image" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-black/85"></div>
         </div>
-        <h1 class="text-4xl sm:text-5xl md:text-7xl text-center font-semibold">I'm <span class="text-blue-400">Lautaro Reche</span></h1>
-        <p class="text-xl md:text-2xl text-center max-w-md md:max-w-2xl font-semibold">Data Analyst and Business Intelligence professional.</p>
+        <h1 class="text-6xl md:text-7xl text-center font-semibold">I'm <span class="text-blue-400">Lautaro Reche</span></h1>
+        <p class="text-3xl text-center max-w-md md:max-w-2xl font-semibold">Data & Business Intelligence Analyst</p>
         <a href="#projects" class="absolute bottom-8 left-1/2 -translate-x-1/2 text-2xl animate-bounce transition-transform duration-500">
             <i class="fa-solid fa-chevron-down"></i>
         </a>
@@ -81,7 +81,7 @@
                     </a>
                 </li>
             </ul>
-            <p class="text-2xl text-center max-w-xl font-semibold">Hope we can work together!</p>
+            <p class="text-2xl text-center max-w-xl font-semibold">Let’s build something great together!</p>
         </div>
         <hr class="mx-auto my-8 w-10/12 text-gray-100">
         <p class="text-lg text-center font-semibold">&copy; <span id="year"></span> - Lautaro Reche</p>
