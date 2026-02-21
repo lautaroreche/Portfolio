@@ -1,5 +1,13 @@
 [
     {
+        "title": "Kanboard Web Page",
+        "tags": "Python, Django, PostgreSQL, HTML, TailwindCSS",
+        "type": "Full Stack",
+        "image": "https://res.cloudinary.com/dbmamjgiv/image/upload/v1771698869/foto-proyecto-kanboard_vtrsag.webp",
+        "public_url": "https://kanboard-web-page.onrender.com/",
+        "repo_url": "https://github.com/lautaroreche/Kanboard-Web-Page"
+    },
+    {
         "title": "Legari Web Page",
         "tags": "Python, Django, PostgreSQL, HTML, CSS",
         "type": "Full Stack",
