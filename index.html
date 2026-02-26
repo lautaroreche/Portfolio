@@ -24,7 +24,6 @@
     </style>
 </head>
 <body class="m-0 p-0 box-border text-black overflow-x-hidden">
-    
     <header>
         <nav class="fixed top-0 right-0 flex md:justify-center p-4 w-full h-auto z-50">
             <button id="menu-toggle" class="md:hidden fixed z-40 flex items-center justify-center w-16 h-16 text-3xl border border-gray-300 shadow-md bg-white hover:bg-blue-200 hover:border-blue-300 transition-colors rounded-full cursor-pointer" aria-label="Menu icon">
@@ -55,24 +54,24 @@
         </a>
     </section>
 
-    <main id="projects" class="flex flex-col items-center gap-12 py-16 px-12">
+    <main id="projects" class="flex flex-col items-center gap-12 py-12 px-6">
         <h2 class="text-3xl md:text-5xl text-center font-semibold">Projects</h2>
         <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 max-w-[900px]"></div>
     </main>
 
-    <section id="technologies" class="flex flex-col items-center gap-12 py-24 px-12 bg-blue-200">
+    <section id="technologies" class="flex flex-col items-center gap-12 py-12 px-6 bg-blue-200">
         <h2 class="text-3xl md:text-5xl text-center font-semibold">Technologies</h2>
         <div id="technologies-container" class="max-w-[800px]">
             <ul class="flex justify-center items-center gap-3 md:gap-4 flex-wrap"></ul>
         </div>
     </section>
 
-    <section id="experience" class="flex flex-col items-center gap-12 py-16 px-12">
+    <section id="experience" class="flex flex-col items-center gap-12 py-12 px-6">
         <h2 class="text-3xl md:text-5xl text-center font-semibold">Experience</h2>
         <div class="flex flex-col items-center gap-14"></div>
     </section>
 
-    <footer id="contact" class="flex flex-col items-center justify-between gap-2 py-24 px-12 bg-blue-200">
+    <footer id="contact" class="flex flex-col items-center justify-between gap-2 py-12 px-6 bg-blue-200">
         <div class="flex flex-col justify-center gap-10">
             <h2 class="text-3xl md:text-5xl text-center font-semibold">Contact me</h2>
             <ul class="flex justify-center gap-4">
@@ -194,10 +193,10 @@
                 container.innerHTML = projects.map(project => `
                     <div class="space-y-3 max-w-[500px] mx-auto">
                         <div class="relative group w-full h-auto shadow-sm">
-                            ${project.public_url ? `<a href="${project.public_url}" target="_blank" rel="noopener"><img src="${project.image}" alt="${project.title}" class="w-full h-auto object-cover"></a>` : `<img src="${project.image}" alt="${project.title}" class="w-full h-auto object-cover">`}
-                            <p class="absolute top-0 left-0 px-5 py-2 text-lg font-semibold border bg-blue-50 border-transparent rounded-br-3xl z-20">${project.type}</p>
-                            ${project.public_url ? `<a href="${project.public_url}" target="_blank" rel="noopener" class="absolute bottom-0 left-0 px-5 py-2 bg-blue-50 border border-transparent text-lg font-semibold hover:bg-blue-200 hover:border-blue-300 rounded-tr-3xl z-20">View project</a>` : ''}
-                            <a href="${project.repo_url}" target="_blank" rel="noopener" class="absolute bottom-0 right-0 px-5 py-2 bg-blue-50 border border-transparent hover:bg-blue-200 hover:border-blue-300 text-lg rounded-tl-3xl z-20 flex items-center justify-center"><i class="fa-brands fa-github text-2xl"></i></a>
+                            ${project.public_url ? `<a href="${project.public_url}" target="_blank" rel="noreferrer noopener"><img src="${project.image}" alt="${project.title}" class="w-full h-auto object-cover"></a>` : `<img src="${project.image}" alt="${project.title}" class="w-full h-auto object-cover">`}
+                            <p class="absolute top-0 left-0 px-3 py-1 text-lg font-semibold border bg-blue-50 border-transparent rounded-br-3xl z-20">${project.type}</p>
+                            ${project.public_url ? `<a href="${project.public_url}" target="_blank" rel="noreferrer noopener" class="absolute bottom-0 left-0 px-3 py-1 bg-blue-50 border border-transparent text-lg font-semibold hover:bg-blue-200 hover:border-blue-300 rounded-tr-3xl z-20">View project</a>` : ''}
+                            <a href="${project.repo_url}" target="_blank" rel="noreferrer noopener" class="absolute bottom-0 right-0 px-3 py-1 bg-blue-50 border border-transparent hover:bg-blue-200 hover:border-blue-300 text-lg rounded-tl-3xl z-20 flex items-center justify-center"><i class="fa-brands fa-github text-2xl"></i></a>
                         </div>
                         <div>
                             ${project.public_url ? `<a href="${project.public_url}" target="_blank" class="inline-block"><h3 class="text-xl md:text-2xl font-semibold">${project.title.toUpperCase()}</h3></a>` : `<h3 class="text-xl md:text-2xl font-semibold">${project.title.toUpperCase()}</h3>`}
