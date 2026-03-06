@@ -1,5 +1,13 @@
 [
     {
+        "title": "Ragusa Ecommerce",
+        "tags": "Python, Django, PostgreSQL, HTML, TailwindCSS",
+        "type": "Full Stack",
+        "image": "https://res.cloudinary.com/dbmamjgiv/image/upload/v1772787876/logo-ragusa_lavmuy.webp",
+        "public_url": "https://ragusa-ecommerce.onrender.com/",
+        "repo_url": "https://github.com/lautaroreche/E-Commerce-Django"
+    },
+    {
         "title": "Kanboard Web Page",
         "tags": "Python, Django, PostgreSQL, HTML, TailwindCSS",
         "type": "Full Stack",
