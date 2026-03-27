@@ -1,27 +1,30 @@
 [
     {
-        "title": "AI Data Analyst",
+        "title": "Software Developer for AI Training",
         "company": "Outlier",
         "image": "https://res.cloudinary.com/dbmamjgiv/image/upload/v1767297253/lqupmzr0nretpkfzneo5.webp",
         "start_date": "June 2024",
         "end_date": "December 2024",
         "location": "Buenos Aires, Argentina",
         "description": [
-            "Optimized AI models through RLHF (Reinforcement Learning from Human Feedback) focusing on code quality and production standards to ensure high-quality outputs within the 6-month project period.",
-            "Validated 100+ high-complexity algorithmic and mathematical prompts per week, maintaining 90%+ precision to optimize LLMs reasoning."
+            "Evaluated and optimized AI models through RLHF, focusing on code quality and adherence to production standards to ensure high-quality software outputs.",
+            "Validated 100+ high-complexity algorithmic and mathematical prompts per week, identifying edge cases and maintaining 90%+ precision in LLM reasoning.",
+            "Performed rigorous manual testing of AI responses to detect inconsistencies, logical errors, and deviations from expected technical requirements."
         ]
     },
     {
-        "title": "Software Engineer",
+        "title": "Software Developer - QA",
         "company": "Mercado Libre",
         "image": "https://res.cloudinary.com/dbmamjgiv/image/upload/v1767297320/wlwyjemjiskacdpyphu7.webp",
         "start_date": "August 2021",
         "end_date": "December 2024",
         "location": "Buenos Aires, Argentina",
         "description": [
-            "Automated 90% of CX process inquiries in two months using Python (Pandas) and SQL, significantly reducing manual intervention and increasing scalability.",
-            "Managed 10+ projects in Jira, led cross-functional following for data-driven incident resolution, and drove continuous improvement in Agile environments.",
-            "Performed ongoing data analysis using Microsoft Excel / Google Sheets and Tableau focused on process optimization, performance monitoring and service quality improvement."
+            "Designed and implemented Python (Pandas) and SQL scripts to automate 90% of manual verification processes, drastically reducing human error and increasing scalability.",
+            "Managed 10+ projects in Jira, leading cross-functional follow-ups for incident resolution and performing root cause analysis in Agile environments (Scrum/Kanban).",
+            "Performed ongoing analysis and data validation to monitor system performance, ensuring that process optimizations met service quality standards.",
+            "Created automated reports for various teams with the aim of giving information visibility and improving KPIs / OKRs.",
+            "Utilized Tableau and Excel to track performance monitoring and service quality improvement, identifying areas for technical debt reduction."
         ]
     },
     {
@@ -32,8 +35,8 @@
         "end_date": "July 2021",
         "location": "Buenos Aires, Argentina",
         "description": [
-            "Achieved an average +60% NPS during the COVID-19 pandemic through proactive customer service and end-to-end dispute management.",
-            "Performed ongoing data analysis using Microsoft Excel / Google Sheets and Tableau focused on process optimisation, performance monitoring and service quality improvement."
+            "Managed complex dispute resolutions, gaining deep insight into end-user pain points and common software failure scenarios.",
+            "Performed data-driven analysis using Microsoft Excel / Google Sheets and Tableau to improve service quality, focusing on proactive problem-solving and maintaining a +60% NPS during high-demand periods."
         ]
     }
 ]
