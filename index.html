@@ -1,249 +1,356 @@
 <!DOCTYPE html>
-<html lang="en" class="overscroll-y-none">
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio web de Lautaro Reche">
-    <meta name="keywords" content="portfolio, data analyst, data analytics, data viz, business intelligence, dashboards, Excel, SQL, Python, Power BI">
-    <meta name="author" content="Lautaro Reche">
-    <meta name="robots" content="index, follow">
-    <title>Lautaro Reche | Information Systems</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.3/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/output.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mozilla+Text:wght@200..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <style>
-        .nav-link-active {
-            background-color: #bfdbfe !important;
-            border-color: #93c5fd !important;
-            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lautaro Reche – Data & Automation | Information Systems" />
+  <meta name="keywords" content="portfolio, data analyst, data analytics, business intelligence, dashboards, Excel, SQL, Python, Power BI, automation" />
+  <meta name="author" content="Lautaro Reche" />
+  <link rel="icon" type="image/png" href="images/atom.png">
+  <title>Lautaro Reche | Data & Automation</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: '#00f0c8',
+            accent2: '#3d8bff',
+            darkBg: '#070b14',
+            darkCard: '#0d1220',
+            muted: '#7a8599',
+          },
+          fontFamily: {
+            head: ['Syne', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+            body: ['DM Sans', 'sans-serif'],
+          },
+          animation: {
+            'pulse-slow': 'pulse 2s infinite',
+            'fade-up': 'fadeUp 0.8s ease-out forwards',
+            'shimmer': 'shimmer 1.6s infinite linear',
+          },
+          keyframes: {
+            fadeUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            shimmer: {
+              '0%': { backgroundPosition: '200% 0' },
+              '100%': { backgroundPosition: '-200% 0' },
+            }
+          }
         }
-    </style>
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: linear-gradient(rgba(0,240,200,.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,240,200,.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .skeleton {
+      background: linear-gradient(90deg, rgba(255,255,255,.035) 25%, rgba(255,255,255,.06) 50%, rgba(255,255,255,.035) 75%);
+      background-size: 200% 100%;
+    }
+  </style>
 </head>
-<body class="m-0 p-0 box-border text-black overflow-x-hidden">
-    <header>
-        <nav class="fixed top-0 right-0 flex md:justify-center p-4 w-full h-auto z-50">
-            <button id="menu-toggle" class="md:hidden fixed z-40 flex items-center justify-center w-16 h-16 text-3xl border border-gray-300 shadow-md bg-white hover:bg-blue-200 hover:border-blue-300 transition-colors rounded-full cursor-pointer" aria-label="Menu icon">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul id="mobile-menu" class="fixed md:static inset-0 md:inset-auto -translate-y-full md:translate-y-0 bg-white flex flex-col md:flex-row justify-center items-center gap-10 md:gap-1 px-3 py-5 text-2xl md:text-lg font-semibold text-black border border-gray-300 shadow-md md:rounded-full transition-transform duration-500 z-30">
-                <li><a href="#home" class="nav-link px-4 py-2 rounded-full border border-white hover:bg-blue-200 hover:border-blue-300 hover:shadow-sm transition-colors">Home</a></li>
-                <li><a href="#projects" class="nav-link px-4 py-2 rounded-full border border-white hover:bg-blue-200 hover:border-blue-300 hover:shadow-sm transition-colors">Projects</a></li>
-                <li><a href="#technologies" class="nav-link px-4 py-2 rounded-full border border-white hover:bg-blue-200 hover:border-blue-300 hover:shadow-sm transition-colors">Technologies</a></li>
-                <li><a href="#experience" class="nav-link px-4 py-2 rounded-full border border-white hover:bg-blue-200 hover:border-blue-300 hover:shadow-sm transition-colors">Experience</a></li>
-                <li><a href="#contact" class="nav-link px-4 py-2 rounded-full border border-white hover:bg-blue-200 hover:border-blue-300 hover:shadow-sm transition-colors">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="bg-darkBg text-[#e8edf5] font-body overflow-x-hidden leading-relaxed">
 
-    <section id="home" class="relative flex flex-col items-center justify-center gap-6 md:gap-8 px-14 md:px-28 pt-20 text-white" style="height: calc(var(--vh, 1vh) * 100);">
-        <div class="absolute inset-0 -z-10">
-            <img src="https://res.cloudinary.com/dbmamjgiv/image/upload/v1774112437/pexels-floriandoppler-6427919_an0olr.jpg" alt="Background image" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-black/80"></div>
+  <nav class="fixed top-0 left-0 right-0 z-[100] flex justify-center p-5 md:p-8">
+    <button id="menu-toggle" aria-label="Toggle menu" class="md:hidden fixed top-4 right-5 z-[200] bg-darkCard/90 border border-white/10 text-white w-10 h-10 rounded-full flex items-center justify-center backdrop-blur-md">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div id="nav-menu" class="nav-inner flex items-center gap-1 bg-darkBg/75 backdrop-blur-xl border border-white/10 rounded-full p-2 transition-transform duration-500 max-md:fixed max-md:inset-0 max-md:flex-col max-md:justify-center max-md:rounded-none max-md:-translate-y-full max-md:bg-darkBg [&.open]:translate-y-0">
+      <a href="#home" class="nav-link font-mono text-sm tracking-widest uppercase text-muted px-4 py-2 rounded-full border border-transparent transition-all hover:text-accent hover:bg-accent/10 hover:border-accent/20 active-link">Home</a>
+      <a href="#projects" class="nav-link font-mono text-sm tracking-widest uppercase text-muted px-4 py-2 rounded-full border border-transparent transition-all hover:text-accent hover:bg-accent/10 hover:border-accent/20">Projects</a>
+      <a href="#technologies" class="nav-link font-mono text-sm tracking-widest uppercase text-muted px-4 py-2 rounded-full border border-transparent transition-all hover:text-accent hover:bg-accent/10 hover:border-accent/20">Technologies</a>
+      <a href="#experience" class="nav-link font-mono text-sm tracking-widest uppercase text-muted px-4 py-2 rounded-full border border-transparent transition-all hover:text-accent hover:bg-accent/10 hover:border-accent/20">Experience</a>
+      <a href="#education" class="nav-link font-mono text-sm tracking-widest uppercase text-muted px-4 py-2 rounded-full border border-transparent transition-all hover:text-accent hover:bg-accent/10 hover:border-accent/20">Education</a>
+      <a href="#contact" class="nav-link font-mono text-sm tracking-widest uppercase text-muted px-4 py-2 rounded-full border border-transparent transition-all hover:text-accent hover:bg-accent/10 hover:border-accent/20">Contact</a>
+    </div>
+  </nav>
+
+  <section id="home" class="relative min-h-[100dvh] flex flex-col items-center justify-center gap-6 px-8 pt-28 pb-16 text-center overflow-hidden">
+    <div class="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[120vw] h-[100vh] max-w-[900px] max-h-[700px] bg-[radial-gradient(ellipse_at_50%_30%,rgba(0,240,200,0.12)_0%,rgba(61,139,255,0.08)_40%,transparent_70%)] pointer-events-none z-0"></div>
+    
+    <div class="relative z-10 inline-flex items-center gap-2 font-mono text-sm tracking-[0.12em] uppercase text-accent border border-accent/25 rounded-full px-4 py-1.5 bg-accent/5 animate-fade-up">
+      <span class="w-1.5 h-1.5 rounded-full bg-accent shadow-[0_0_8px_var(--accent)] animate-pulse"></span>
+      Available for opportunities
+    </div>
+    
+    <h1 class="relative z-10 font-head text-[clamp(3rem,9vw,7rem)] font-extrabold leading-none tracking-tighter animate-fade-up [animation-delay:0.15s]">
+      Lautaro<br><span class="text-accent">Reche</span>
+    </h1>
+    
+    <p class="relative z-10 font-mono text-md text-muted tracking-wide animate-fade-up [animation-delay:0.3s]">
+      <span class="text-white">Data</span> &nbsp;·&nbsp; <span class="text-white">Automation</span> &nbsp;·&nbsp; <span class="text-white">Information Systems</span>
+    </p>
+    
+    <div class="relative z-10 flex flex-wrap justify-center gap-3 animate-fade-up [animation-delay:0.45s]">
+      <a href="#projects" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-accent text-black font-mono text-sm font-semibold uppercase tracking-wider transition-all hover:bg-white/90">
+        <i class="fas fa-folder-open"></i> View Projects
+      </a>
+      <a href="https://www.linkedin.com/in/lautaroreche/" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/10 font-mono text-[12px] uppercase tracking-wider transition-all hover:border-accent/25 hover:text-accent hover:bg-accent/5">
+        <i class="fa-brands fa-linkedin"></i> LinkedIn
+      </a>
+    </div>
+
+    <a href="#projects" class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-muted animate-fade-up [animation-delay:1.2s]">
+      <span class="font-mono text-sm tracking-widest uppercase">Scroll</span>
+      <i class="fas fa-chevron-down animate-bounce"></i>
+    </a>
+  </section>
+
+  <section id="projects" class="relative z-10 py-24 px-8">
+    <div class="max-w-[1100px] mx-auto">
+      <div class="flex items-center gap-2 font-mono text-sm tracking-[0.14em] uppercase text-accent mb-4">
+        <span class="w-7 h-[1px] bg-accent"></span> Work
+      </div>
+      <h2 class="font-head text-[clamp(2rem,5vw,3.5rem)] font-extrabold tracking-tight leading-[1.1] mb-12">Projects</h2>
+      
+      <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 gap-7">
+        <div class="border border-white/10 rounded-2xl overflow-hidden bg-white/5">
+          <div class="skeleton aspect-video animate-shimmer"></div>
+          <div class="p-6 space-y-3">
+            <div class="skeleton h-5 w-[70%] rounded animate-shimmer"></div>
+            <div class="skeleton h-3 w-[45%] rounded animate-shimmer"></div>
+          </div>
         </div>
-        <h1 class="text-6xl md:text-7xl text-center font-semibold">I'm <span class="text-blue-400">Lautaro Reche</span></h1>
-        <p class="text-3xl text-center max-w-md md:max-w-2xl font-semibold">Data & Automation | Information Systems Graduate</p>
-        <a href="https://www.linkedin.com/in/lautaroreche/" target="_blank" rel="noreferrer noopener" class="flex items-center justify-center w-20 h-20 text-4xl text-blue-500 border border-blue-200 shadow-md bg-white rounded-full hover:bg-blue-50 hover:border-blue-300 hover:scale-105 transition-transform duration-300 ease-out" aria-label="LinkedIn button">
-            <i class="fa-brands fa-linkedin"></i>
+        <div class="border border-white/10 rounded-2xl overflow-hidden bg-white/5">
+          <div class="skeleton aspect-video animate-shimmer"></div>
+          <div class="p-6 space-y-3">
+            <div class="skeleton h-5 w-[60%] rounded animate-shimmer"></div>
+            <div class="skeleton h-3 w-[50%] rounded animate-shimmer"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="technologies" class="relative z-10 py-24 px-8 bg-darkCard">
+    <div class="max-w-[1100px] mx-auto">
+      <div class="flex items-center gap-2 font-mono text-sm tracking-[0.14em] uppercase text-accent mb-4">
+        <span class="w-7 h-[1px] bg-accent"></span> Skills
+      </div>
+      <h2 class="font-head text-[clamp(2rem,5vw,3.5rem)] font-extrabold tracking-tight leading-[1.1] mb-12">Tech Stack</h2>
+      <div id="technologies-container" class="flex flex-wrap gap-3">
+        <div class="skeleton h-10 w-28 rounded-full animate-shimmer"></div>
+        <div class="skeleton h-10 w-24 rounded-full animate-shimmer"></div>
+        <div class="skeleton h-10 w-32 rounded-full animate-shimmer"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="relative z-10 py-24 px-8">
+    <div class="max-w-[1100px] mx-auto">
+      <div class="flex items-center gap-2 font-mono text-sm tracking-[0.14em] uppercase text-accent mb-4">
+        <span class="w-7 h-[1px] bg-accent"></span> Career
+      </div>
+      <h2 class="font-head text-[clamp(2rem,5vw,3.5rem)] font-extrabold tracking-tight leading-[1.1] mb-12">Experience</h2>
+      <div id="experience-container" class="relative max-w-[780px] flex flex-col space-y-0 before:content-[''] before:absolute before:left-[26px] before:top-0 before:bottom-0 before:w-[1px] before:bg-white/10">
+        </div>
+    </div>
+  </section>
+
+  <section id="education" class="relative z-10 py-24 px-8 bg-darkBg">
+    <div class="max-w-[1100px] mx-auto">
+      <div class="flex items-center gap-2 font-mono text-sm tracking-[0.14em] uppercase text-accent mb-4">
+        <span class="w-7 h-[1px] bg-accent"></span> Knowledge
+      </div>
+      <h2 class="font-head text-[clamp(2rem,5vw,3.5rem)] font-extrabold tracking-tight leading-[1.1] mb-12">Education &<br>Certifications</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="education-container">
+        <div class="skeleton h-40 w-full rounded-2xl animate-shimmer"></div>
+        <div class="skeleton h-40 w-full rounded-2xl animate-shimmer"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="relative z-10 py-24 px-8 bg-darkCard text-center">
+    <div class="max-w-[1100px] mx-auto">
+      <div class="flex justify-center items-center gap-2 font-mono text-sm tracking-[0.14em] uppercase text-accent mb-4">
+        <span class="w-7 h-[1px] bg-accent"></span> Get in touch
+      </div>
+      <h2 class="font-head text-[clamp(2rem,5vw,3.5rem)] font-extrabold tracking-tight leading-[1.1] mb-10">Ready to<br>add value.</h2>
+      <p class="text-[clamp(1rem,2vw,1.15rem)] text-muted max-w-[500px] mx-auto mb-10 leading-relaxed">
+        Open to data, automation and IT roles.<br>Drop me a message and let's talk.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="mailto:lautaroreche1@gmail.com" class="flex items-center gap-2.5 px-6 py-3 border border-white/10 rounded-full font-mono text-[12px] uppercase tracking-wider bg-white/5 transition-all text-[#ff6b6b] hover:border-[#ff6b6b]/30 hover:bg-[#ff6b6b]/5 hover:-translate-y-0.5">
+          <i class="fa-solid fa-envelope"></i> Gmail
         </a>
-        <a href="#projects" class="absolute bottom-8 left-1/2 -translate-x-1/2 text-2xl animate-bounce transition-transform duration-500">
-            <i class="fa-solid fa-chevron-down"></i>
+        <a href="https://www.linkedin.com/in/lautaroreche/" target="_blank" class="flex items-center gap-2.5 px-6 py-3 border border-white/10 rounded-full font-mono text-[12px] uppercase tracking-wider bg-white/5 transition-all text-accent2 hover:border-accent2/30 hover:bg-accent2/5 hover:-translate-y-0.5">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
         </a>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <main id="projects" class="flex flex-col items-center gap-12 py-12 px-6">
-        <h2 class="text-3xl md:text-5xl text-center font-semibold">Projects</h2>
-        <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 max-w-[900px]"></div>
-    </main>
+  <footer class="relative z-10 text-center py-7 px-8 border-t border-white/10 font-mono text-sm text-muted tracking-widest">
+    &copy; <span id="year"></span> — Lautaro Reche
+  </footer>
 
-    <section id="technologies" class="flex flex-col items-center gap-12 py-12 px-6 bg-blue-200">
-        <h2 class="text-3xl md:text-5xl text-center font-semibold">Technologies</h2>
-        <div id="technologies-container" class="max-w-[800px]">
-            <ul class="flex justify-center items-center gap-3 md:gap-4 flex-wrap"></ul>
-        </div>
-    </section>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-    <section id="experience" class="flex flex-col items-center gap-12 py-12 px-6">
-        <h2 class="text-3xl md:text-5xl text-center font-semibold">Experience</h2>
-        <div class="flex flex-col items-center gap-14"></div>
-    </section>
+    // Mobile menu
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('nav-menu');
+    toggle.addEventListener('click', () => menu.classList.toggle('open'));
+    menu.querySelectorAll('.nav-link').forEach(l => {
+      l.addEventListener('click', () => menu.classList.remove('open'));
+    });
 
-    <footer id="contact" class="flex flex-col items-center justify-between gap-2 py-12 px-6 bg-blue-200">
-        <div class="flex flex-col justify-center gap-10">
-            <h2 class="text-3xl md:text-5xl text-center font-semibold">Contact me</h2>
-            <ul class="flex justify-center gap-4">
-                <li>
-                    <a href="mailto:lautaroreche1@gmail.com" class="flex items-center justify-center w-20 h-20 text-4xl text-red-500 border border-blue-200 shadow-md bg-white rounded-full hover:bg-blue-50 hover:border-blue-300 hover:scale-105 transition-transform duration-300 ease-out" aria-label="Mail button">
-                        <i class="fa-solid fa-envelope"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/lautaroreche/" target="_blank" rel="noreferrer noopener" class="flex items-center justify-center w-20 h-20 text-4xl text-blue-500 border border-blue-200 shadow-md bg-white rounded-full hover:bg-blue-50 hover:border-blue-300 hover:scale-105 transition-transform duration-300 ease-out" aria-label="LinkedIn button">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                </li>
-            </ul>
-            <p class="text-2xl text-center max-w-xl font-semibold">Let’s build something great together!</p>
-        </div>
-        <hr class="mx-auto my-8 w-10/12 text-gray-100">
-        <p class="text-lg text-center font-semibold">&copy; <span id="year"></span> - Lautaro Reche</p>
-    </footer>
+    // Active nav on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const setActive = (id) => {
+      navLinks.forEach(l => {
+        const isActive = l.getAttribute('href') === `#${id}`;
+        l.classList.toggle('text-accent', isActive);
+        l.classList.toggle('bg-accent/10', isActive);
+        l.classList.toggle('border-accent/20', isActive);
+        l.classList.toggle('text-muted', !isActive);
+      });
+    };
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) setActive(e.target.id); });
+    }, { rootMargin: '-30% 0px -60% 0px' });
+    sections.forEach(s => obs.observe(s));
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            document.getElementById('year').textContent = new Date().getFullYear();
-            setViewportHeight();
-            window.addEventListener('resize', setViewportHeight);
+    document.addEventListener('click', e => {
+      const a = e.target.closest('a[href^="#"]');
+      if (!a) return;
+      if (a.getAttribute('href') === '#') return;
+      e.preventDefault();
+      document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
+    });
 
-            const toggleButton = document.getElementById('menu-toggle');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const navLinks = document.querySelectorAll('#mobile-menu .nav-link');
-            let isOpen = false;
+    // Load Data
+    async function loadProjects() {
+      try {
+        const res = await fetch('json/projects.json');
+        const projects = await res.json();
+        const c = document.getElementById('projects-container');
+        c.innerHTML = projects.map(p => `
+          <div class="group relative bg-white/5 border border-white/10 rounded-2xl overflow-hidden transition-all duration-300 hover:border-accent/25 hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/40">
+            <div class="relative overflow-hidden aspect-square bg-darkCard">
+              ${p.public_url ? `<a href="${p.public_url}" target="_blank"><img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy"></a>` : `<img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy">`}
+              <span class="absolute top-3 left-3 font-mono text-sm tracking-wider uppercase bg-black/80 text-accent border border-accent/25 px-3 py-1 rounded-full backdrop-blur-md">${p.type}</span>
+              <div class="absolute bottom-3 right-3 flex gap-2">
+                ${p.public_url ? `<a href="${p.public_url}" target="_blank" class="w-8 h-8 rounded-full bg-black/80 border border-white/10 text-white text-sm flex items-center justify-center backdrop-blur-md transition-colors hover:border-accent/50 hover:text-accent"><i class="fas fa-arrow-up-right-from-square"></i></a>` : ''}
+                <a href="${p.repo_url}" target="_blank" class="w-8 h-8 rounded-full bg-black/80 border border-white/10 text-white text-lg flex items-center justify-center backdrop-blur-md transition-colors hover:border-accent/50 hover:text-accent"><i class="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="font-head text-xl font-bold tracking-tight mb-2 hover:text-accent transition-colors">
+                 ${p.public_url ? `<a href="${p.public_url}" target="_blank">${p.title}</a>` : p.title}
+              </div>
+              <div class="font-mono text-sm text-muted tracking-wide">${p.tags}</div>
+            </div>
+          </div>
+        `).join('');
+      } catch (err) { console.error('Projects:', err); }
+    }
 
-            const updateActiveLink = (id) => {
-                navLinks.forEach(link => {
-                    link.classList.toggle('nav-link-active', link.getAttribute('href') === `#${id}`);
-                });
-            };
+    async function loadTechnologies() {
+      try {
+        const res = await fetch('json/technologies.json');
+        const techs = await res.json();
+        document.getElementById('technologies-container').innerHTML = `
+          <div class="flex flex-wrap gap-3">
+            ${techs.map(t => `
+              <div class="flex items-center gap-2.5 px-4 py-2 bg-white/5 border border-white/10 rounded-full text-md transition-all hover:border-accent/25 hover:bg-accent/5 hover:-translate-y-0.5 group">
+                <img src="${t.image}" alt="${t.name}" class="w-5 h-5 object-contain">
+                <span>${t.name}</span>
+              </div>
+            `).join('')}
+          </div>
+        `;
+      } catch (err) { console.error('Technologies:', err); }
+    }
 
-            toggleButton.addEventListener('click', () => {
-                isOpen = !isOpen;
-                mobileMenu.classList.toggle('translate-y-0', isOpen);
-                mobileMenu.classList.toggle('-translate-y-full', !isOpen);
-            });
+    async function loadExperience() {
+      try {
+        const res = await fetch('json/experience.json');
+        const exps = await res.json();
+        document.getElementById('experience-container').innerHTML = exps.map(e => `
+          <div class="flex gap-6 pb-12 last:pb-0">
+            <div class="flex-shrink-0 w-[52px] h-[52px] rounded-xl border border-white/10 bg-white/5 flex items-center justify-center z-10">
+              <img src="${e.image}" alt="${e.company}" class="w-full h-full object-cover rounded-xl">
+            </div>
+            <div class="pt-1">
+              <h3 class="font-head text-lg font-bold">${e.title}</h3>
+              <p class="text-accent font-mono text-md tracking-wide my-1">${e.company}</p>
+              <p class="font-mono text-sm text-muted tracking-wide mb-3">${e.start_date} — ${e.end_date} &nbsp;·&nbsp; ${e.location}</p>
+              <ul class="space-y-2">
+                ${e.description.map(d => `
+                  <li class="relative pl-5 text-md text-white/80 leading-relaxed before:content-['›'] before:absolute before:left-0 before:text-accent before:font-bold">${d}</li>
+                `).join('')}
+              </ul>
+            </div>
+          </div>
+        `).join('');
+      } catch (err) { console.error('Experience:', err); }
+    }
 
-            document.addEventListener('click', (e) => {
-                const link = e.target.closest('a[href^="#"]');
-                if (link) {
-                    e.preventDefault();
-                    const targetId = link.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
+    async function loadEducation() {
+      try {
+        const res = await fetch('json/education.json');
+        const edu = await res.json();
+        document.getElementById('education-container').innerHTML = edu.map(item => `
+          <div class="group relative p-6 bg-white/5 border border-white/10 rounded-2xl transition-all duration-300 hover:border-accent/30 hover:bg-white/[0.07]">
+            <div class="flex items-start gap-4">
+              <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-darkCard border border-white/10 flex items-center justify-center overflow-hidden">
+                <img src="${item.image}" alt="${item.institution}" class="w-full h-full object-cover">
+              </div>
+              
+              <div class="flex-1 pt-0.5">
+                <h3 class="font-head text-lg font-bold text-white group-hover:text-accent transition-colors leading-tight">
+                  ${item.title}
+                </h3>
+                
+                <p class="text-accent font-mono text-md tracking-wide my-1">
+                  ${item.institution}
+                </p>
+                
+                <p class="font-mono text-sm text-muted tracking-wide mb-3">
+                  ${item.year}
+                </p>
+                
+                ${item.credential_url ? `
+                  <a href="${item.credential_url}" target="_blank" class="inline-flex items-center gap-2 text-sm font-mono text-muted hover:text-white transition-colors">
+                    <i class="fas fa-certificate text-accent"></i> View Certificate
+                  </a>
+                ` : ''}
+              </div>
+            </div>
+          </div>
+        `).join('');
+      } catch (err) { 
+        console.error('Education:', err);
+        document.getElementById('education-container').innerHTML = '<p class="text-muted">Error loading education data.</p>';
+      }
+    }
 
-                    if (targetElement) {
-                        targetElement.scrollIntoView({ behavior: 'smooth' });
-                        history.pushState(null, null, ' ');
-                    }
-
-                    if (isOpen) {
-                        isOpen = false;
-                        mobileMenu.classList.remove('translate-y-0');
-                        mobileMenu.classList.add('-translate-y-full');
-                    }
-                }
-            });
-
-            const observerOptions = {
-                root: null,
-                rootMargin: '-25% 0px -65% 0px',
-                threshold: 0
-            };
-
-            const observerCallback = (entries) => {
-                const isAtBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 80;
-                if (isAtBottom) return;
-
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        updateActiveLink(entry.target.id);
-                    }
-                });
-            };
-
-            const observer = new IntersectionObserver(observerCallback, observerOptions);
-            document.querySelectorAll('section, main, footer').forEach(section => {
-                if (section.id) observer.observe(section);
-            });
-
-            window.addEventListener('scroll', () => {
-                const scrollPosition = window.innerHeight + window.scrollY;
-                const bodyHeight = document.body.offsetHeight;
-                const isAtBottom = scrollPosition >= bodyHeight - 50;
-
-                if (isAtBottom) {
-                    updateActiveLink('contact');
-                } else {
-                    const currentSection = [...document.querySelectorAll('section, main, footer')]
-                        .reverse()
-                        .find(el => el.getBoundingClientRect().top < window.innerHeight / 2);
-                    
-                    if (currentSection && currentSection.id) {
-                        updateActiveLink(currentSection.id);
-                    }
-                }
-            });
-
-            loadProjects();
-            loadTechnologies();
-            loadExperience();
-        });
-
-        function setViewportHeight() {
-            let vh = window.innerHeight * 0.01;
-            document.documentElement.style.setProperty('--vh', `${vh}px`);
-        }
-
-        async function loadProjects() {
-            try {
-                const res = await fetch('json/projects.json');
-                const projects = await res.json();
-                const container = document.querySelector('#projects-container');
-                container.innerHTML = projects.map(project => `
-                    <div class="space-y-3 max-w-[500px] mx-auto">
-                        <div class="relative group w-full h-auto shadow-sm">
-                            ${project.public_url ? `<a href="${project.public_url}" target="_blank" rel="noreferrer noopener"><img src="${project.image}" alt="${project.title}" class="w-full h-auto object-cover"></a>` : `<img src="${project.image}" alt="${project.title}" class="w-full h-auto object-cover">`}
-                            <p class="absolute top-0 left-0 px-3 py-1 text-lg font-semibold border bg-blue-50 border-transparent rounded-br-3xl z-20">${project.type}</p>
-                            ${project.public_url ? `<a href="${project.public_url}" target="_blank" rel="noreferrer noopener" class="absolute bottom-0 left-0 px-3 py-1 bg-blue-50 border border-transparent text-lg font-semibold hover:bg-blue-200 hover:border-blue-300 rounded-tr-3xl z-20">View project</a>` : ''}
-                            <a href="${project.repo_url}" target="_blank" rel="noreferrer noopener" class="absolute bottom-0 right-0 px-3 py-1 bg-blue-50 border border-transparent hover:bg-blue-200 hover:border-blue-300 text-lg rounded-tl-3xl z-20 flex items-center justify-center"><i class="fa-brands fa-github text-2xl"></i></a>
-                        </div>
-                        <div>
-                            ${project.public_url ? `<a href="${project.public_url}" target="_blank" class="inline-block"><h3 class="text-xl md:text-2xl font-semibold">${project.title.toUpperCase()}</h3></a>` : `<h3 class="text-xl md:text-2xl font-semibold">${project.title.toUpperCase()}</h3>`}
-                            <p class="md:text-lg text-gray-700">${project.tags}</p>
-                        </div>
-                    </div>
-                `).join('');
-            } catch (err) { console.error(err); }
-        }
-
-        async function loadTechnologies() {
-            try {
-                const res = await fetch('json/technologies.json');
-                const techs = await res.json();
-                const container = document.querySelector('#technologies-container ul');
-                container.innerHTML = techs.map(tech => `
-                    <li class="flex items-center gap-2 px-4 py-2 bg-white border border-blue-200 rounded-full shadow-md hover:border-blue-300 transition-colors">
-                        <img src="${tech.image}" alt="${tech.name}" class="h-8 w-8">
-                        <p class="md:text-lg">${tech.name}</p>
-                    </li>
-                `).join('');
-            } catch (err) { console.error(err); }
-        }
-
-        async function loadExperience() {
-            try {
-                const res = await fetch('json/experience.json');
-                const experiences = await res.json();
-                const container = document.querySelector('#experience .flex.flex-col.items-center.gap-14');
-                container.innerHTML = experiences.map(exp => `
-                    <div class="flex flex-col md:flex-row gap-1 md:gap-4 w-full max-w-[800px]">
-                        <img src="${exp.image}" alt="${exp.company}" class="size-16 rounded-lg">
-                        <div class="flex flex-col gap-4">
-                            <div class="flex flex-col gap-1 md:text-lg">
-                                <p class="text-2xl font-semibold">${exp.title}</p>
-                                <p>${exp.company}</p>
-                                <p class="text-gray-700">${exp.start_date} - ${exp.end_date}</p>
-                                <p class="text-gray-700">${exp.location}</p>
-                            </div>
-                            <ul class="list-disc pl-5 md:text-lg space-y-1">
-                                ${exp.description.map(d => `<li>${d}</li>`).join('')}
-                            </ul>
-                        </div>
-                    </div>
-                `).join('');
-            } catch (err) { console.error(err); }
-        }
-    </script>
+    loadProjects();
+    loadTechnologies();
+    loadExperience();
+    loadEducation();
+  </script>
 </body>
 </html>

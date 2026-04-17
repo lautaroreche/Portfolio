@@ -1,0 +1,58 @@
+[
+    {
+        "title": "CS50: Introduction to Computer Science (In progress)",
+        "institution": "Harvard University",
+        "year": "2026",
+        "image": "https://res.cloudinary.com/dbmamjgiv/image/upload/v1776411703/harvard_1_zczztl.webp",
+        "credential_url": ""
+    },
+    {
+        "title": "AI Fluency: Framework & Foundations",
+        "institution": "Anthropic",
+        "year": "2026",
+        "image": "https://res.cloudinary.com/dbmamjgiv/image/upload/v1776411259/anthropic_xds4wm.webp",
+        "credential_url": "https://verify.skilljar.com/c/96r9gm53m6d3"
+    },
+    {
+        "title": "Google Data Analytics Professional Certificate",
+        "institution": "Google",
+        "year": "2025",
+        "image": "https://res.cloudinary.com/dbmamjgiv/image/upload/v1776411259/google_yttlag.webp",
+        "credential_url": "https://www.coursera.org/account/accomplishments/professional-cert/65UYHRL5LSFH"
+    },
+    {
+        "title": "Scientific Computing with Python",
+        "institution": "freeCodeCamp",
+        "year": "2022",
+        "image": "https://res.cloudinary.com/dbmamjgiv/image/upload/v1776411259/freecodecamp_lbqp94.webp",
+        "credential_url": "https://www.freecodecamp.org/certification/lautaroreche/scientific-computing-with-python-v7"
+    },
+    {
+        "title": "Agile Fundamentals: Scrum and Kanban",
+        "institution": "Udemy",
+        "year": "2022",
+        "image": "https://res.cloudinary.com/dbmamjgiv/image/upload/v1776411294/udemy_fmuuu9.webp",
+        "credential_url": "https://www.udemy.com/certificate/UC-39d5744f-1353-4e8c-b4ff-c8bb4702f0e6/"
+    },
+    {
+        "title": "Web Development",
+        "institution": "Coderhouse",
+        "year": "2022",
+        "image": "https://res.cloudinary.com/dbmamjgiv/image/upload/v1776411259/coderhouse_q9uhaq.webp",
+        "credential_url": "https://res.cloudinary.com/dbmamjgiv/image/upload/v1758376360/Web_Development_Certificate_-_Coderhouse_irfrwn.png"
+    },
+    {
+        "title": "Data Analytics",
+        "institution": "Coderhouse",
+        "year": "2021",
+        "image": "https://res.cloudinary.com/dbmamjgiv/image/upload/v1776411259/coderhouse_q9uhaq.webp",
+        "credential_url": "https://res.cloudinary.com/dbmamjgiv/image/upload/v1758376359/Data_Analytics_Certificate_-_Coderhouse_a1a98i.png"
+    },
+    {
+        "title": "English - C2 Proficient",
+        "institution": "EF",
+        "year": "2021",
+        "image": "https://res.cloudinary.com/dbmamjgiv/image/upload/v1776411259/ef_xpeocp.webp",
+        "credential_url": "https://cert.efset.org/ELAqt6"
+    }
+]
